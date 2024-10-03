@@ -1,0 +1,84 @@
+/* Container styling */
+.home-work-flow-container {
+  padding: 3.25em 3.125em;
+  text-align: center;
+}
+
+.home-work-flow-container h1 {
+  letter-spacing: 0.025em;
+  font-size: 2.3em;
+  font-weight: 700;
+  color: #169ea0;
+}
+
+.home-work-flow-container p {
+  font-size: 1.15em;
+  color: #666;
+  margin: 1em 0 3em 0;
+}
+
+/* Workflow section - using grid layout */
+.workflow-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 cards in a row */
+  gap: 2em;
+  /* Space between cards */
+  justify-items: center;
+}
+
+/* Workflow card styling */
+.workflow-card {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1.5em;
+  /* background-color: #f5f5f5; */
+  border-radius: 10px;
+  box-shadow: -1px -1px 20px 2px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* .workflow-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+} */
+
+/* Number styling */
+.workflow-card span {
+  font-size: 3em;
+  font-weight: bold;
+  color: #169ea0;
+  width: 25%;
+  text-align: center;
+}
+
+/* Heading and paragraph */
+.workflow-card h2 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+  color: #333;
+}
+
+.workflow-card p {
+  font-size: 1em;
+  color: #666;
+}
+
+.workflow-card-content {
+  width: 75%;
+  text-align: left;
+}
+
+.workflow-card-content h2,
+.workflow-card-content p {
+  margin: 0;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .workflow-section {
+    grid-template-columns: repeat(1, 1fr);
+    /* Stacks cards vertically on smaller screens */
+  }
+}

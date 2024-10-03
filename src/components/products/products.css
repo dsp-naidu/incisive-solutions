@@ -1,0 +1,32 @@
+.products-container {
+  padding: 6em 3.125em;
+  background-image: url('1.mp4');
+  /* height: 200px; */
+
+  display: flex;
+  justify-content: space-around;
+
+  height: 70vh;
+  background-color: #030E22;
+  color: snow;
+
+  /* position: relative; */
+
+
+}
+
+.products-content {
+  display: flex;
+  flex-direction: column;
+  padding: 2em 0;
+}
+
+.products-content ul {
+  list-style: none;
+}
+
+.products-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 2em;
+}

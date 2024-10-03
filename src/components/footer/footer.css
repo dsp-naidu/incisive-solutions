@@ -1,0 +1,58 @@
+.footer-container {
+  background-color: #030e22;
+  color: #748494;
+  padding: 6em 3.125em 3em 3.125em;
+}
+
+.footer-container .footer-content {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  text-align: left;
+}
+
+.footer-content ul {
+  list-style: none;
+}
+
+.footer-products-container h1,
+.footer-services-container h1,
+.footer-contact h1,
+.footer-about h1 {
+  font-size: 1.5em;
+  font-weight: 500;
+  padding-bottom: 1em;
+}
+
+.footer-contact-address-container,
+.footer-contact-email-container,
+.footer-contact-phone-container {
+  display: flex;
+  align-items: baseline;
+  padding-bottom: 0.5em;
+}
+
+.footer-contact-address-container .footer-contact-address,
+.footer-contact-email-container p,
+.footer-contact-phone-container p {
+  padding-left: 0.65em;
+}
+
+.footer-about {
+  text-align: right;
+}
+
+.footer-about .footer-about-social-media {
+  display: flex;
+  justify-content: end;
+  padding: 2em 0;
+}
+
+.footer-about .footer-about-social-media span {
+  padding: 0.5em 0 0.5em 1.5em;
+}
+
+.footer-container .footer-trademark {
+  padding-top: 4em;
+}

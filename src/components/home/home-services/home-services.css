@@ -1,0 +1,77 @@
+/* Container styles */
+.home-services-container {
+  padding: 1.25em 3.125em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #f5f5f5;
+}
+
+.home-services-heading {
+  margin: 2em 0;
+}
+
+.home-services-heading h1 {
+  letter-spacing: 0.025em;
+  font-size: 2.3em;
+  font-weight: 700;
+  color: #169ea0;
+}
+
+.home-services-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 2em 0;
+}
+
+/* Individual card styles */
+.home-service-card {
+  background-color: #f5f5f5;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+}
+
+.home-service-card img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1rem;
+}
+
+.home-service-card h2 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.home-service-card p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.home-service-card a {
+  color: #169ea0;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s ease;
+}
+
+.home-service-card a:hover {
+  border-bottom: 2px solid #169ea0;
+}
+
+/* Hover effect for raising the card */
+.home-service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}

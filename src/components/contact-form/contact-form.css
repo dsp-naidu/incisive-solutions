@@ -1,0 +1,116 @@
+/* Contact Form */
+.contact-form {
+  padding: 1.5em;
+  /* background-color: #f9f9f9; */
+  background-color: #fff;
+  border-radius: 0.5em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h1 {
+  font-size: 2em;
+}
+
+.contact-form p {
+  margin: 1em 0 2.5em 0;
+  font-size: 1em;
+  color: #666;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.contact-form .form-input {
+  background-color: #f9f9f9;
+}
+
+.contact-form .form-input option {
+  background-color: #f5f5f5;
+}
+
+/* Inputs and Textarea */
+.contact-form input,
+.contact-form textarea {
+  padding: 1em;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 0.25em;
+  width: 100%;
+}
+
+.contact-form textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+/* Country code and phone number side by side */
+.phone-input-container {
+  display: flex;
+  gap: 0.625em;
+}
+
+.phone-input-container select,
+.phone-input-container input {
+  /* flex: 1; */
+  padding: 1em;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 0.25em;
+}
+
+.phone-input-container select {
+  flex: 0.4;
+  max-width: 45%;
+  padding-right: 2.5em;
+  color: #666;
+}
+
+.phone-input-container input {
+  flex: 0.6;
+}
+
+/* Country selector styles */
+.country-selector {
+  position: relative;
+  padding-right: 2.5em; /* Adjust padding to give space for the arrow */
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23999' d='M70 90l35-35H35z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75em top 50%;
+  background-size: 1em;
+}
+
+/* Adjusting the arrow's appearance */
+.country-selector::after {
+  content: ''; /* No extra content since we're using a background image */
+}
+
+/* Submit button */
+.contact-form button {
+  padding: 0.8em;
+  font-size: 1.2em;
+  font-weight: 700;
+  background-color: #169ea0;
+  color: #f2f2f2;
+  border: none;
+  border-radius: 0.25em;
+  cursor: pointer;
+  /* transition: background-color 0.3s ease, font-size 0.3s ease, color 0.3s ease, transform 0.2s ease; */
+}
+
+.contact-form button:hover,
+.contact-form button:focus {
+  background-color: #0f7678;
+  font-size: 1.225em;
+  color: #fff;
+}
+
+.contact-form button:active {
+  background-color: #0a6a6b;
+  transform: scale(0.95);
+}
