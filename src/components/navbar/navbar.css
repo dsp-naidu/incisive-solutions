@@ -50,16 +50,17 @@
   /* text-shadow: 0 0 7px #7B9386, 0 0 6px #7B9386, 0 0 5px #7B9386, 0 0 4px #7B9386;  */
 }
 
-.navbar-logo .brand-color-1, 
+.navbar-logo .brand-color-1,
 .navbar-logo .brand-color-2 {
   background: linear-gradient(90deg, #229799, #7B9386);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.navbar-logo .brand-color-1, 
+.navbar-logo .brand-color-1,
 .navbar-logo .brand-color-2 {
-  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Slight shadow to lift text */
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  /* Slight shadow to lift text */
 }
 
 .navbar-logo h1 {
@@ -76,11 +77,12 @@
   font-size: 1.75em;
   font-weight: 500;
   letter-spacing: 0.125em;
-  
+
   /* Gradient settings */
   /* background: linear-gradient(90deg, #229799, #7B9386, #229799); */
   background: linear-gradient(90deg, #0C4D4E, #3D4A43, #7B9386, #3D4A43, #0C4D4E);
-  background-size: 200%; /* Makes the gradient wide enough to animate */
+  background-size: 200%;
+  /* Makes the gradient wide enough to animate */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
@@ -96,6 +98,7 @@
   0% {
     background-position: 0% 0%;
   }
+
   100% {
     background-position: 100% 0%;
   }
@@ -107,15 +110,14 @@
   letter-spacing: 0.125em;
 
   /* Gradient with 7 color stops */
-  background: linear-gradient(90deg, 
-    #229799, #0C4D4E, #3D4A43, #7B9386, 
-    #3D4A43, #0C4D4E, #229799
-  );
+  background: linear-gradient(90deg,
+      #229799, #0C4D4E, #3D4A43, #7B9386,
+      #3D4A43, #0C4D4E, #229799);
 
-  background: linear-gradient(45deg, 
-  #229799, #229799, #0C4D4E, #0C4D4E, #7B9386, #7B9386, #3D4A43, #3D4A43, #229799, #229799
-);
-  background-size: 400%; /* Making it larger to create the wave effect */
+  background: linear-gradient(45deg,
+      #229799, #229799, #0C4D4E, #0C4D4E, #7B9386, #7B9386, #3D4A43, #3D4A43, #229799, #229799);
+  background-size: 400%;
+  /* Making it larger to create the wave effect */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
@@ -131,11 +133,15 @@
   0% {
     background-position: 0% 50%;
   }
+
   50% {
-    background-position: 200% 50%; /* Moves through the gradient */
+    background-position: 200% 50%;
+    /* Moves through the gradient */
   }
+
   100% {
-    background-position: 0% 50%; /* Resets to create the loop */
+    background-position: 0% 50%;
+    /* Resets to create the loop */
   }
 }
 
@@ -177,6 +183,9 @@
   transition: color 0.2s ease-in, font-weight 0.2 ease;
   cursor: pointer;
   color: #f5f5f5;
+
+  /* for dropdown */
+  position: relative;
 }
 
 .navbar-menu-item:hover,
@@ -187,6 +196,48 @@
   color: #169ea0;
   font-weight: 700;
   /* font-size: 1.05em; */
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(174, 196, 194, 0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em 0;
+  min-width: 150px;
+  z-index: 999;
+  opacity: 0.6;
+  visibility: visible;
+  border-radius: 0.5em;
+}
+
+/* Dropdown item styling */
+.dropdown-item {
+  padding: 0.5em 1em;
+  text-decoration: none;
+  /* color: #f5f5f5; */
+  color: #f2f2f2;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.dropdown-item:hover {
+  /* background-color: #169ea0; */
+  /* color: #fff; */
+  background-color: rgba(22, 158, 160, 0.3);
+  color: #f5f5f5;
+  font-weight: 700;
 }
 
 /* .active {
