@@ -1,63 +1,74 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import './navbar.css';
-import { RiArrowDropDownLine } from 'react-icons/ri';
+import { FaAngleDown, FaAngleUp } from 'react-icons/fa6';
 
 function Navbar() {
   const [showProductsDropdown, setShowProductsDropdown] = useState(false);
   const [showServicesDropdown, setShowServicesDropdown] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 868);
 
   const handleProductsEnter = () => setShowProductsDropdown(true);
   const handleProductsLeave = () => setShowProductsDropdown(false);
   const handleServicesEnter = () => setShowServicesDropdown(true);
   const handleServicesLeave = () => setShowServicesDropdown(false);
 
+  const toggleProductsDropdown = () =>
+    setShowProductsDropdown(!showProductsDropdown);
+  const toggleServicesDropdown = () =>
+    setShowServicesDropdown(!showServicesDropdown);
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobileView(window.innerWidth <= 868);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
-    <nav className="navbar">
-      {/* <div className="navbar-logo">
-        <a href="/">
-          <img
-            src="logo-incisive-solutions.png"
-            alt="Incisive Solutions Logo"
-          />
-        </a>
-
-      </div> */}
-
+    <nav className={`navbar ${isMenuOpen ? 'active' : ''}`}>
       <Link to="/" className="navbar-logo">
-        {/* <img
-            src="logo-incisive-solutions.png"
-            alt="Incisive Solutions Logo"
-          /> */}
-        <h1>
-          Incisive Solutions
-          {/* <span className="brand-color-1">Incisive </span>
-          <span className="brand-color-2">Solutions</span> */}
-        </h1>
+        <h1>Incisive Solutions</h1>
       </Link>
 
-      {/* <img
-            src="logo-incisive-solutions.png"
-            alt="Incisive Solutions Logo"
-            className="navbar-logo"
-          /> */}
+      {/* Hamburger Menu for Mobile */}
+      <div
+        className={`hamburger ${isMenuOpen ? 'active' : ''}`}
+        onClick={toggleMenu}
+      >
+        <div className="line1"></div>
+        <div className="line2"></div>
+        <div className="line3"></div>
+      </div>
 
       <div className="navbar-menu">
         <NavLink to="/" className="navbar-menu-item">
           Home
         </NavLink>
 
+        {/* Products Dropdown */}
         <div
-          className="dropdown"
+          className={`dropdown ${
+            showProductsDropdown ? 'dropdown-active' : ''
+          }`}
           onMouseEnter={handleProductsEnter}
           onMouseLeave={handleProductsLeave}
+          onClick={toggleProductsDropdown}
         >
-          <NavLink to="products" className="navbar-menu-item">
-            Products
+          <NavLink
+            to="products"
+            className={`navbar-menu-item ${
+              showProductsDropdown ? 'dropdown-active' : ''
+            }`}
+          >
+            Products{' '}
+            {isMobileView &&
+              (showProductsDropdown ? <FaAngleUp /> : <FaAngleDown />)}
           </NavLink>
-          {/* <span>
-            Products <RiArrowDropDownLine className="dropdown-arrow" />
-          </span> */}
           {showProductsDropdown && (
             <div className="dropdown-menu">
               <Link to="/products/product1" className="dropdown-item">
@@ -73,17 +84,26 @@ function Navbar() {
           )}
         </div>
 
+        {/* Services Dropdown */}
         <div
-          className="dropdown"
+          className={`dropdown ${
+            showServicesDropdown ? 'dropdown-active' : ''
+          }`}
           onMouseEnter={handleServicesEnter}
           onMouseLeave={handleServicesLeave}
+          onClick={toggleServicesDropdown}
         >
-          <NavLink to="services" className="navbar-menu-item">
-            Services
+          <NavLink
+            to="services"
+            className={`navbar-menu-item ${
+              showServicesDropdown ? 'dropdown-active' : ''
+            }`}
+          >
+            Services{' '}
+            {isMobileView &&
+              (showServicesDropdown ? <FaAngleUp /> : <FaAngleDown />)}
           </NavLink>
-          {/* <span>
-            Services <RiArrowDropDownLine className="dropdown-arrow" />
-          </span> */}
+
           {showServicesDropdown && (
             <div className="dropdown-menu">
               <Link to="/services/service1" className="dropdown-item">
@@ -98,26 +118,6 @@ function Navbar() {
             </div>
           )}
         </div>
-
-        {/* <NavLink to="products" className="navbar-menu-item">
-          Products
-          <span>
-            <RiArrowDropDownLine className="dropdown-arrow" />
-          </span>
-        </NavLink> */}
-
-        {/* <NavLink to="services" className="navbar-menu-item">
-          Services
-          <span>
-            <RiArrowDropDownLine className="dropdown-arrow" />
-          </span>
-        </NavLink> */}
-        {/* <select>
-          <option>BPO Services</option>
-          <option>Data Entry Services</option>
-          <option>Web Designing</option>
-          <option>IT Services</option>
-        </select> */}
 
         <NavLink to="team" className="navbar-menu-item">
           Team

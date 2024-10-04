@@ -1,5 +1,6 @@
 .contact-container {
-  height: 50vh;
+  height: 100vh;
+  position: relative;
   padding: 6em 3.125em;
   background-color: #030E22;
   color: snow;
