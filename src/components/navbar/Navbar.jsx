@@ -9,18 +9,7 @@ function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 868);
 
-  const handleProductsEnter = () => setShowProductsDropdown(true);
-  const handleProductsLeave = () => setShowProductsDropdown(false);
-  const handleServicesEnter = () => setShowServicesDropdown(true);
-  const handleServicesLeave = () => setShowServicesDropdown(false);
-
-  const toggleProductsDropdown = () =>
-    setShowProductsDropdown(!showProductsDropdown);
-  const toggleServicesDropdown = () =>
-    setShowServicesDropdown(!showServicesDropdown);
-
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-
+  // Handle window resize to detect mobile view
   useEffect(() => {
     const handleResize = () => {
       setIsMobileView(window.innerWidth <= 868);
@@ -28,6 +17,57 @@ function Navbar() {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        !event.target.closest('.dropdown') &&
+        !event.target.closest('.navbar-menu-item')
+      ) {
+        setShowProductsDropdown(false);
+        setShowServicesDropdown(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  // Handle hover (mouse enter/leave) on large screens
+  const handleProductsEnter = () => {
+    if (!isMobileView) setShowProductsDropdown(true);
+  };
+  const handleProductsLeave = () => {
+    if (!isMobileView) setShowProductsDropdown(false);
+  };
+  const handleServicesEnter = () => {
+    if (!isMobileView) setShowServicesDropdown(true);
+  };
+  const handleServicesLeave = () => {
+    if (!isMobileView) setShowServicesDropdown(false);
+  };
+
+  // Toggle Products dropdown on click (both mobile and desktop)
+  const toggleProductsDropdown = () => {
+    setShowProductsDropdown(!showProductsDropdown);
+    setShowServicesDropdown(false); // Close services dropdown when products is toggled
+  };
+
+  // Toggle Services dropdown on click (both mobile and desktop)
+  const toggleServicesDropdown = () => {
+    setShowServicesDropdown(!showServicesDropdown);
+    setShowProductsDropdown(false); // Close products dropdown when services is toggled
+  };
+
+  // Handle keyboard keydown events
+  const handleKeyDown = (e, toggleDropdown) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault(); // Prevent default space scroll behavior
+      toggleDropdown();
+    }
+  };
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
     <nav className={`navbar ${isMenuOpen ? 'active' : ''}`}>
@@ -58,9 +98,10 @@ function Navbar() {
           onMouseEnter={handleProductsEnter}
           onMouseLeave={handleProductsLeave}
           onClick={toggleProductsDropdown}
+          onKeyDown={(e) => handleKeyDown(e, toggleProductsDropdown)}
+          tabIndex="0" // Allows div to be focusable via keyboard/tab
         >
-          <NavLink
-            to="products"
+          <div
             className={`navbar-menu-item ${
               showProductsDropdown ? 'dropdown-active' : ''
             }`}
@@ -68,7 +109,7 @@ function Navbar() {
             Products{' '}
             {isMobileView &&
               (showProductsDropdown ? <FaAngleUp /> : <FaAngleDown />)}
-          </NavLink>
+          </div>
           {showProductsDropdown && (
             <div className="dropdown-menu">
               <Link to="/products/product1" className="dropdown-item">
@@ -92,9 +133,10 @@ function Navbar() {
           onMouseEnter={handleServicesEnter}
           onMouseLeave={handleServicesLeave}
           onClick={toggleServicesDropdown}
+          onKeyDown={(e) => handleKeyDown(e, toggleServicesDropdown)}
+          tabIndex="0" // Allows div to be focusable via keyboard/tab
         >
-          <NavLink
-            to="services"
+          <div
             className={`navbar-menu-item ${
               showServicesDropdown ? 'dropdown-active' : ''
             }`}
@@ -102,7 +144,7 @@ function Navbar() {
             Services{' '}
             {isMobileView &&
               (showServicesDropdown ? <FaAngleUp /> : <FaAngleDown />)}
-          </NavLink>
+          </div>
 
           {showServicesDropdown && (
             <div className="dropdown-menu">

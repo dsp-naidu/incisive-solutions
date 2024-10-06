@@ -57,3 +57,17 @@
 .accordion-content p {
   margin: 0;
 }
+
+@media (max-width: 353px) {
+  .accordion-title span,
+  .accordion-content p {
+    font-size: 0.85em;
+  }
+}
+
+@media (max-width: 329px) {
+  .accordion-title span,
+  .accordion-content p {
+    font-size: 0.75em;
+  }
+}

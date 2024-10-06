@@ -1,5 +1,6 @@
 import React from 'react';
 import './home-about.css';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 function HomeAbout() {
   return (
@@ -10,9 +11,13 @@ function HomeAbout() {
       </div>
 
       <div className="home-about-content">
-        <div className="home-about-section-image">
-          <img src="home-about.webp" alt="About Incisive Solutions" />
-        </div>
+        <DotLottieReact
+          className="home-about-animate-object"
+          src="company-graph.json"
+          loop
+          autoplay
+        />
+
         <div className="home-about-section-content">
           <h3>
             Looking for a reliable and accurate outsource services provider?

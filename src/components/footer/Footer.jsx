@@ -12,7 +12,7 @@ import {
 
 function Footer() {
   return (
-    <div className='footer-container'>
+    <div className="footer-container">
       <div className="footer-content">
         <div className="footer-products-container">
           <h1>Products</h1>
@@ -91,11 +91,13 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className='footer-trademark'>      <p>
-        &copy; {new Date().getFullYear()} Incisive Solutions. All rights
-        reserved.
-      </p></div>
-
+      <div className="footer-trademark">
+        {' '}
+        <p>
+          &copy; {new Date().getFullYear()} Incisive Solutions. All rights
+          reserved.
+        </p>
+      </div>
     </div>
   );
 }

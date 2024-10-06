@@ -11,10 +11,59 @@
   color: #169ea0;
 }
 
+@media (max-width: 600px) {
+  .home-work-flow-container h1 {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 535px) {
+  .home-work-flow-container h1 {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 426px) {
+  .home-work-flow-container h1 {
+    font-size: 1.25em;
+  }
+}
+
+@media (max-width: 372px) {
+  .home-work-flow-container h1 {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 317px) {
+  .home-work-flow-container h1 {
+    font-size: 0.85em;
+  }
+}
+
 .home-work-flow-container p {
   font-size: 1.15em;
   color: #666;
   margin: 1em 0 3em 0;
+  text-align: justify;
+}
+
+@media (max-width: 600px) {
+  .home-work-flow-container p {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 535px) {
+  .home-work-flow-container p {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 372px) {
+  .home-work-flow-container p {
+    font-size: 0.7em;
+  }
 }
 
 /* Workflow section - using grid layout */
@@ -25,6 +74,18 @@
   gap: 2em;
   /* Space between cards */
   justify-items: center;
+}
+
+@media (max-width: 1024px) {
+  .workflow-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .workflow-section {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 /* Workflow card styling */
@@ -53,16 +114,28 @@
   text-align: center;
 }
 
+@media (max-width: 425px) {
+  .workflow-card span {
+    font-size: 2.5em;
+  }
+}
+
 /* Heading and paragraph */
 .workflow-card h2 {
   font-size: 1.5em;
-  margin-bottom: 0.5em;
   color: #333;
+}
+
+@media (max-width: 1156px) {
+  .workflow-card h2 {
+    font-size: 1.25em;
+  }
 }
 
 .workflow-card p {
   font-size: 1em;
   color: #666;
+  text-align: left;
 }
 
 .workflow-card-content {
@@ -75,10 +148,11 @@
   margin: 0;
 }
 
-/* Media query for responsiveness */
-@media (max-width: 768px) {
-  .workflow-section {
-    grid-template-columns: repeat(1, 1fr);
-    /* Stacks cards vertically on smaller screens */
-  }
+.workflow-card-content {
+  padding-left: 0.5em;
 }
+
+.workflow-card-content h2 {
+  padding-bottom: 0.25em;
+}
+

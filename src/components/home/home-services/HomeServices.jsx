@@ -1,8 +1,38 @@
-import React from 'react';
+import { useEffect } from 'react';
 import './home-services.css';
 import { Link } from 'react-router-dom';
 
 function HomeServices() {
+  useEffect(() => {
+    const cards = document.querySelectorAll('.home-service-card');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+          } else {
+            entry.target.classList.remove('in-view');
+          }
+        });
+      },
+      {
+        threshold: 0.5, // Trigger when 50% of the card is in view
+      }
+    );
+
+    cards.forEach((card) => {
+      observer.observe(card);
+    });
+
+    // Cleanup observer on component unmount
+    return () => {
+      cards.forEach((card) => {
+        observer.unobserve(card);
+      });
+    };
+  }, []);
+
   return (
     <div className="home-services-container">
       <div className="home-services-heading">

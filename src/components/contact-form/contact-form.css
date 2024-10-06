@@ -5,6 +5,7 @@
   background-color: #fff;
   border-radius: 0.5em;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
 }
 
 .contact-form h1 {
@@ -75,7 +76,8 @@
 /* Country selector styles */
 .country-selector {
   position: relative;
-  padding-right: 2.5em; /* Adjust padding to give space for the arrow */
+  padding-right: 2.5em;
+  /* Adjust padding to give space for the arrow */
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
@@ -87,7 +89,8 @@
 
 /* Adjusting the arrow's appearance */
 .country-selector::after {
-  content: ''; /* No extra content since we're using a background image */
+  content: '';
+  /* No extra content since we're using a background image */
 }
 
 /* Submit button */
@@ -113,4 +116,213 @@
 .contact-form button:active {
   background-color: #0a6a6b;
   transform: scale(0.95);
+}
+
+/* Wrapper to center the success message */
+.success-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* Ensures full viewport height */
+  width: 100%;
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Optional: semi-transparent background */
+  border-radius: 0.5em;
+}
+
+/* Style for the success message */
+.form-submission-success {
+  background-color: #e0f7e0;
+  border: 2px solid #28a745;
+  border-radius: 0.5em;
+  padding: 20px;
+  text-align: center;
+  color: #155724;
+  font-size: 1.5em;
+  box-shadow: 0 0 10px rgba(0, 128, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.form-submission-success h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.form-submission-success svg {
+  color: #28a745;
+  font-size: 50px;
+  margin-top: 15px;
+}
+
+/* Adding some fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 637px) {
+  .form-submission-success h1 {
+    font-size: 2.25em;
+  }
+}
+
+@media (max-width: 588px) {
+  .form-submission-success h1 {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 538px) {
+  .form-submission-success h1 {
+    font-size: 1.75em;
+  }
+}
+
+@media (max-width: 489px) {
+  .form-submission-success h1 {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 440px) {
+  .form-submission-success h1 {
+    font-size: 1.25em;
+  }
+
+  .form-submission-success p {
+    font-size: 0.6em;
+  }
+}
+
+@media (max-width: 390px) {
+  .form-submission-success h1 {
+    font-size: 1em;
+  }
+
+  .form-submission-success p {
+    font-size: 0.5em;
+  }
+}
+
+@media (max-width: 341px) {
+  .form-submission-success h1 {
+    font-size: 0.85em;
+  }
+
+  .form-submission-success p {
+    font-size: 0.5em;
+  }
+}
+
+@media (max-width: 311px) {
+  .form-submission-success h1 {
+    font-size: 0.75em;
+  }
+
+  .form-submission-success p {
+    font-size: 0.45em;
+  }
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 510px) {
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    /* Full width for inputs */
+    padding: 0.75em;
+    /* Adjust padding */
+  }
+
+  .phone-input-container {
+    flex-direction: column;
+    /* Stack country code and phone number */
+  }
+
+  .phone-input-container select,
+  .phone-input-container input {
+    width: 100%;
+    /* Full width for both */
+    max-width: 100%;
+    /* Ensure they don't shrink */
+    padding: 0.75em;
+  }
+
+  .contact-form h1 {
+    font-size: 1.5em;
+    /* Adjust heading size for smaller screens */
+  }
+
+  .contact-form button {
+    padding: 0.75em;
+    font-size: 1.1em;
+    /* Slightly smaller button for mobile */
+  }
+}
+
+@media (max-width: 362px) {
+
+  .contact-form h1 {
+    font-size: 1.05em;
+    /* Adjust heading size for smaller screens */
+  }
+
+  .contact-form p {
+    font-size: 0.9em;
+  }
+
+  .phone-input-container select,
+  .phone-input-container input {
+    font-size: 0.9em;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.9em;
+  }
+
+  .contact-form button {
+    font-size: 0.9em;
+    /* Slightly smaller button for mobile */
+  }
+}
+
+@media (max-width: 323px) {
+
+  .contact-form h1 {
+    font-size: 0.85em;
+    /* Adjust heading size for smaller screens */
+  }
+
+  .contact-form p {
+    font-size: 0.7em;
+  }
+
+  .phone-input-container select,
+  .phone-input-container input {
+    font-size: 0.7em;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.7em;
+  }
+
+  .contact-form button {
+    font-size: 0.7em;
+    /* Slightly smaller button for mobile */
+  }
 }
