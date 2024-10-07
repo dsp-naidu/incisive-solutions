@@ -1,7 +1,155 @@
 .contact-container {
-  height: 100vh;
   position: relative;
-  padding: 6em 3.125em;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding-top: 6%;
   background-color: #030E22;
-  color: snow;
+  background-image: url('contact-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  /* color: snow; */
+}
+
+.contact-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+.contact-hero-heading {
+  position: relative;
+  z-index: 3;
+  color: #fff;
+  /* top: -20%; */
+  /* right: 10%; */
+  margin: 10% 0;
+}
+
+@media (max-width: 768px) {
+  .contact-hero-heading {
+    margin: 20% 0;
+  }
+}
+
+.contact-hero-heading h1 {
+  font-size: 2em;
+}
+
+.contact-content-wrapper {
+  position: relative;
+  z-index: 3;
+  /* filter: blur(10px); */
+  background-color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  /* top: 60%; */
+  padding: 0 3.125em;
+  /* margin-top: 6%; */
+
+  align-items: flex-start;
+  width: 100%;
+}
+
+@media (max-width: 425px) {
+  .contact-content-wrapper {
+    padding: 0 1.75em;
+  }
+}
+
+@media (max-width: 375px) {
+  .contact-content-wrapper {
+    padding: 0 1.45em;
+  }
+}
+
+@media (max-width: 320px) {
+  .contact-content-wrapper {
+    padding: 0 1.125em;
+  }
+}
+
+.contact-content {
+  padding: 3% 3%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.25%;
+}
+
+@media (max-width: 1024px) {
+  .contact-content {
+    /* display: flex;
+    flex-direction: column; */
+
+    grid-template-columns: 1fr;
+  }
+
+  .contact-page-form {
+    padding: 5% 0;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .contact-page-form {
+    padding-bottom: 10%;
+  }
+}
+
+@media (max-width: 425px) {
+
+  .contact-page-form {
+    padding-bottom: 15%;
+  }
+}
+
+@media (max-width: 375px) {
+
+  .contact-page-form {
+    padding-bottom: 20%;
+  }
+}
+
+@media (max-width: 320px) {
+
+  .contact-page-form {
+    padding-bottom: 25%;
+  }
+}
+
+.contact-content-info {
+  color: #fff;
+  text-align: left;
+  padding-top: 3%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
+}
+
+.contact-content-desc {
+  font-size: 115%;
+  text-align: left;
+}
+
+.contact-content-communication-section {
+  display: flex;
+  align-items: baseline;
+  gap: 4%;
+  padding-top: 3%;
+  border-top: 1px solid gray;
+}
+
+.contact-content-communication-section svg {
+  font-size: 150%;
+}
+
+.contact-content-communication-section h2 {
+  font-size: 150%;
+  align-self: baseline;
 }

@@ -41,8 +41,15 @@ function HomeFeatures() {
         </div>
 
         {/* Image Section */}
-        <div className="features-image">
-          <img src="home-features.jpg" alt="Features" />
+        {/* <div className="features-image">
+          <img src="home-features-5.jpg" alt="Features" />
+        </div> */}
+
+        {/* Video Section */}
+        <div className="features-video">
+          <video autoPlay loop muted playsInline>
+            <source src='home-features.mp4' type='video/mp4' />
+          </video>
         </div>
       </div>
     </div>

@@ -25,9 +25,11 @@
   font-size: 1.75em;
   font-weight: 500;
   letter-spacing: 0.125em;
-  background: linear-gradient(45deg,
-      #229799, #229799, #0C4D4E, #0C4D4E, #7B9386, #7B9386, #3D4A43, #3D4A43, #229799, #229799);
+  /* background: linear-gradient(45deg,
+      #229799, #229799, #0C4D4E, #0C4D4E, #7B9386, #7B9386, #3D4A43, #3D4A43, #229799, #229799); */
   background-size: 400%;
+  /* background-color: #229799; */
+  background: linear-gradient(45deg, #229799, #7B9386);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
