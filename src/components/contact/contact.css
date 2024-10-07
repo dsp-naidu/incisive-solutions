@@ -5,7 +5,7 @@
   overflow: hidden;
   padding-top: 6%;
   background-color: #030E22;
-  background-image: url('contact-bg.jpg');
+  background-image: url('/assets/contact-bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
