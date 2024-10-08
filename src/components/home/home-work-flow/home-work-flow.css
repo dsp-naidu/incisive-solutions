@@ -4,6 +4,24 @@
   text-align: center;
 }
 
+@media (max-width: 425px) {
+  .home-work-flow-container {
+    padding: 2.5em 1.5em;
+  }
+}
+
+@media (max-width: 375px) {
+  .home-work-flow-container {
+    padding: 2.25em 1.25em;
+  }
+}
+
+@media (max-width: 320px) {
+  .home-work-flow-container {
+    padding: 2em 1em;
+  }
+}
+
 .home-work-flow-container h1 {
   letter-spacing: 0.025em;
   font-size: 2.3em;
@@ -11,58 +29,47 @@
   color: #169ea0;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .home-work-flow-container h1 {
     font-size: 2em;
   }
 }
 
-@media (max-width: 535px) {
+@media (max-width: 425px) {
   .home-work-flow-container h1 {
     font-size: 1.5em;
   }
 }
 
-@media (max-width: 426px) {
+@media (max-width: 375px) {
   .home-work-flow-container h1 {
-    font-size: 1.25em;
+    font-size: 1.5em;
   }
 }
 
-@media (max-width: 372px) {
+@media (max-width: 320px) {
   .home-work-flow-container h1 {
-    font-size: 1em;
-  }
-}
-
-@media (max-width: 317px) {
-  .home-work-flow-container h1 {
-    font-size: 0.85em;
+    font-size: 1.3em;
   }
 }
 
 .home-work-flow-container p {
   font-size: 1.15em;
   color: #666;
-  margin: 1em 0 3em 0;
+  margin: 1.5em 0 3em 0;
   text-align: justify;
+  /* padding-top: 1em; */
 }
 
-@media (max-width: 600px) {
+@media (max-width: 425px) {
   .home-work-flow-container p {
-    font-size: 1em;
+    font-size: 0.9em;
   }
 }
 
-@media (max-width: 535px) {
+@media (max-width: 375px) {
   .home-work-flow-container p {
     font-size: 0.8em;
-  }
-}
-
-@media (max-width: 372px) {
-  .home-work-flow-container p {
-    font-size: 0.7em;
   }
 }
 
@@ -88,6 +95,24 @@
   }
 }
 
+@media (max-width: 425px) {
+  .workflow-section {
+    gap: 1.75em;
+  }
+}
+
+@media (max-width: 375px) {
+  .workflow-section {
+    gap: 1.3em;
+  }
+}
+
+@media (max-width: 320px) {
+  .workflow-section {
+    gap: 1em;
+  }
+}
+
 /* Workflow card styling */
 .workflow-card {
   display: flex;
@@ -98,6 +123,24 @@
   border-radius: 10px;
   box-shadow: -1px -1px 20px 2px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (max-width: 425px) {
+  .workflow-card {
+    padding: 1.25em;
+  }
+}
+
+@media (max-width: 375px) {
+  .workflow-card {
+    padding: 1em;
+  }
+}
+
+@media (max-width: 320px) {
+  .workflow-card {
+    padding: 0.8em;
+  }
 }
 
 /* .workflow-card:hover {
@@ -132,10 +175,22 @@
   }
 }
 
+@media (max-width: 425px) {
+  .workflow-card h2 {
+    font-size: 1.1em;
+  }
+}
+
 .workflow-card p {
   font-size: 1em;
   color: #666;
   text-align: left;
+}
+
+@media (max-width: 425px) {
+  .workflow-card p {
+    font-size: 0.9em;
+  }
 }
 
 .workflow-card-content {
