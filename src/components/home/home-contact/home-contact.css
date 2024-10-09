@@ -8,6 +8,35 @@
   background-color: #F1F1F1;
 }
 
+@media (max-width: 901px) {
+  .home-contact-container {
+    flex-direction: column;
+  }
+
+  .home-contact-container:last-child {
+    align-items: center;
+  }
+}
+
+@media (max-width: 425px) {
+  .home-contact-container {
+    padding: 2em 1.5em;
+    gap: 2em;
+  }
+}
+
+@media (max-width: 375px) {
+  .home-contact-container {
+    padding: 2em 1.25em;
+  }
+}
+
+@media (max-width: 320px) {
+  .home-contact-container {
+    padding: 2em 1em;
+  }
+}
+
 .home-contact-container>div {
   flex: 1;
 }
@@ -20,27 +49,21 @@
   text-align: left;
 }
 
-@media (max-width: 981px) {
+@media (max-width: 425px) {
   .home-contact-section-one h1 {
     font-size: 2em;
   }
 }
 
-@media (max-width: 938px) {
+@media (max-width: 375px) {
   .home-contact-section-one h1 {
     font-size: 1.75em;
   }
 }
 
-@media (max-width: 359px) {
+@media (max-width: 320px) {
   .home-contact-section-one h1 {
     font-size: 1.5em;
-  }
-}
-
-@media (max-width: 322px) {
-  .home-contact-section-one h1 {
-    font-size: 1.35em;
   }
 }
 
@@ -51,13 +74,22 @@
   text-align: left;
 }
 
-/* For smaller screens, make the sections stack vertically */
-@media (max-width: 901px) {
-  .home-contact-container {
-    flex-direction: column;
+@media (max-width: 425px) {
+  .home-contact-section-one p {
+    font-size: 1.05em;
+    margin: 1em 0 2em 0;
   }
+}
 
-  .home-contact-container:last-child {
-    align-items: center;
+@media (max-width: 375px) {
+  .home-contact-section-one p {
+    margin: 1em 0 1.5em 0;
+  }
+}
+
+@media (max-width: 320px) {
+  .home-contact-section-one p {
+    font-size: 1em;
+    margin: 1em 0 1.5em 0;
   }
 }

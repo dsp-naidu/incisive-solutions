@@ -40,7 +40,7 @@ function About() {
 
             <div className="about-content-section-1-right">
               <video autoPlay loop muted playsInline>
-                <source src='about-section-11.mp4' type='video/mp4' />
+                <source src='/assets/about-section-1.mp4' type='video/mp4' />
               </video>
             </div>
           </div>

@@ -16,7 +16,7 @@
   }
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .home-services-container {
     padding: 1.175em;
   }
@@ -32,7 +32,7 @@
   .home-services-container {
     padding: 1.05em;
   }
-}
+} */
 
 @media (max-width: 320px) {
   .home-services-container {
@@ -80,7 +80,7 @@
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 600px) {
   .home-services-cards {
     grid-template-columns: 1fr;
     gap: 0.5em;
@@ -130,20 +130,19 @@
 @media (max-width: 1024px) {
   .home-service-card {
     max-width: none;
-  }
-}
-
-@media (max-width: 953px) {
-  .home-service-card {
-    max-width: 40%;
-    margin-bottom: 1.5em;
+    padding: 1.5em;
   }
 }
 
 @media (max-width: 768px) {
   .home-service-card {
-    padding: 1.5em;
-    max-width: 90%;
+    padding: 1.35em;
+  }
+}
+
+@media (max-width: 425px) {
+  .home-service-card {
+    padding: 1em;
   }
 }
 

@@ -4,6 +4,18 @@
   padding: 6em 3.125em 3em 3.125em;
 }
 
+@media (max-width: 375px) {
+  .footer-container {
+    padding: 3em 1.25em 1.25em 1.25em;
+  }
+}
+
+@media (max-width: 320px) {
+  .footer-container {
+    padding: 2em 1em 1em 1em;
+  }
+}
+
 .footer-content {
 
   display: grid;
@@ -75,6 +87,15 @@
   .footer-content span,
   .footer-trademark p {
     font-size: 0.5em;
+  }
+}
+
+@media (max-width: 375px) {
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
   }
 }
 
@@ -210,4 +231,10 @@
 .footer-container .footer-trademark {
   padding-top: 4em;
   text-align: center;
+}
+
+@media (max-width: 375px) {
+  .footer-container .footer-trademark {
+    padding: 0;
+  }
 }

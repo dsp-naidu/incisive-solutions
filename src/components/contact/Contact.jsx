@@ -12,17 +12,34 @@ function Contact() {
       <div className="contact-content-wrapper">
         <div className="contact-content">
           <div className="contact-content-info">
-            <p className="contact-content-desc">
+            <div className="contact-content-desc">
+              <p>
+                We cater to the requirements of different sectors of clients
+                around the globe. So if you have any requirements in the area of
+                data entry, data processing, data conversion, scanning and
+                indexing, web research or data transcription, please do contact
+                us. You can get in touch with us through phone, fax, email or
+                Messenger using the details given below.
+              </p>
+              <p>
+                Alternatively, you can fill in the form given below . Please be
+                patient while waiting for response. (24/7 Support!) Our team
+                will reach you at the earliest to discuss your requirements.
+              </p>
+            </div>
+            {/* <p className="contact-content-desc">
               We cater to the requirements of different sectors of clients
               around the globe. So if you have any requirements in the area of
               data entry, data processing, data conversion, scanning and
               indexing, web research or data transcription, please do contact
               us. You can get in touch with us through phone, fax, email or
-              Messenger using the details given below. Alternatively, you can
-              fill in the form given below . Please be patient while waiting for
-              response. (24/7 Support!) Our team will reach you at the earliest
-              to discuss your requirements.
+              Messenger using the details given below.
             </p>
+            <p className="contact-content-desc">
+              Alternatively, you can fill in the form given below . Please be
+              patient while waiting for response. (24/7 Support!) Our team will
+              reach you at the earliest to discuss your requirements.
+            </p> */}
 
             <div className="contact-content-communication-section">
               <span>
@@ -30,10 +47,8 @@ function Contact() {
               </span>
               <div>
                 <h2>Our Locations</h2>
-                <p>
-                  6-16, NAD Colony, Krishnarayapuram, Vepagunta, Visakhapatnam -
-                  530051, Andhra Pradesh, India
-                </p>
+                <p>6-16, NAD Colony, Krishnarayapuram, Vepagunta,</p>
+                <p>Visakhapatnam - 530051, Andhra Pradesh, India</p>
               </div>
             </div>
 
