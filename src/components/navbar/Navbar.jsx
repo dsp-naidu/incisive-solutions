@@ -12,7 +12,7 @@ function Navbar() {
   // Handle window resize to detect mobile view
   useEffect(() => {
     const handleResize = () => {
-      setIsMobileView(window.innerWidth <= 868);
+      setIsMobileView(window.innerWidth <= 972); {/* 868px */}
     };
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
