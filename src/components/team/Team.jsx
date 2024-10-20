@@ -3,7 +3,6 @@ import './team.css';
 
 function Team() {
   return (
-
     <div className="team-container">
       <div className="team-hero-container">
         <video autoPlay muted loop playsInline className="background-video">
@@ -14,7 +13,8 @@ function Team() {
           <h1>Our Team</h1>
         </div>
       </div>
-{/* 
+
+      {/* 
       <div className="team-content-wrapper">
         <div className='team-content'>
           <div>
@@ -34,7 +34,6 @@ function Team() {
           </div>
         </div>
       </div> */}
-
     </div>
   );
 }

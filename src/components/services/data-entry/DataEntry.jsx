@@ -1,18 +1,17 @@
 import React from 'react';
-import './about.css';
-import AboutValues from './about-values/AboutValues';
+import './data-entry.css';
 
-function About() {
+function DataEntry() {
   return (
-    <div className="about-container">
-      <div className="about-hero-container">
-        <div className="about-hero-heading">
-          <h1>About Us</h1>
+    <div className="data-entry-container">
+      <div className="data-entry-hero-container">
+        <div className="data-entry-hero-heading">
+          <h1>Data Entry</h1>
         </div>
       </div>
 
-      <div className="about-content-wrapper">
-        <div className="about-content-container">
+      <div className="data-entry-content-wrapper">
+        {/* <div className="about-content-container">
           <div className="about-content-section-1">
             <div className="about-content-section-1-left">
               <h1>YOUR TOP-NOTCH BPO SERVICE PROVIDER</h1>
@@ -46,10 +45,11 @@ function About() {
             </div>
           </div>
         </div>
-        <AboutValues />
+
+        <></> */}
       </div>
     </div>
   );
 }
 
-export default About;
+export default DataEntry;

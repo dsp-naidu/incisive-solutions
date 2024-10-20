@@ -12,7 +12,10 @@ function Navbar() {
   // Handle window resize to detect mobile view
   useEffect(() => {
     const handleResize = () => {
-      setIsMobileView(window.innerWidth <= 972); {/* 868px */}
+      setIsMobileView(window.innerWidth <= 972);
+      {
+        /* 868px */
+      }
     };
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
@@ -73,6 +76,7 @@ function Navbar() {
     <nav className={`navbar ${isMenuOpen ? 'active' : ''}`}>
       <Link to="/" className="navbar-logo">
         <h1>Incisive Solutions</h1>
+        <i>Inspire, Innovate, Integrate..!</i>
       </Link>
 
       {/* Hamburger Menu for Mobile */}
@@ -148,14 +152,14 @@ function Navbar() {
 
           {showServicesDropdown && (
             <div className="dropdown-menu">
-              <Link to="/services/service1" className="dropdown-item">
-                Service 1
+              <Link to="/services/data-entry" className="dropdown-item">
+                Data Entry
               </Link>
-              <Link to="/services/service2" className="dropdown-item">
-                Service 2
+              <Link to="/services/data-processing" className="dropdown-item">
+                Data Processing
               </Link>
-              <Link to="/services/service3" className="dropdown-item">
-                Service 3
+              <Link to="/services/data-conversion" className="dropdown-item">
+                Data Conversion
               </Link>
             </div>
           )}

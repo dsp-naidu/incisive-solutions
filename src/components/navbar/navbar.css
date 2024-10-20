@@ -25,21 +25,49 @@
 .navbar-logo {
   text-decoration: none;
   padding: 0.75em 0.125em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .navbar-logo h1 {
   font-size: 2.25em; /* 1.75em */
   font-weight: 900; /* 500 */
   letter-spacing: 0.125em;
+  /* background: linear-gradient(45deg,
+      #229799, #229799, #0C4D4E, #0C4D4E, #7B9386, #7B9386, #3D4A43, #3D4A43, #229799, #229799); */
+  /* background-size: 400%; */
+  /* background-color: #229799; */
+  /* background: linear-gradient(45deg, #229799, #7B9386); */
+  /* -webkit-background-clip: text; */
+  /* -webkit-text-fill-color: transparent; */
+  /* text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); */
+  /* 18s */
+  /* animation: gradientWave 36s ease-in-out infinite;  */
+}
+
+.navbar-logo i {
+  font-family: "Moon Dance", cursive;
+  font-size: 1.25em;
+  font-weight: 600;
+  color: #7B9386;
+}
+
+@media (max-width: 972px) {
+  .navbar-logo i {
+    display: none;
+  }
+}
+
+.navbar-logo h1,
+.navbar-logo i {
   background: linear-gradient(45deg,
       #229799, #229799, #0C4D4E, #0C4D4E, #7B9386, #7B9386, #3D4A43, #3D4A43, #229799, #229799);
   background-size: 400%;
-  /* background-color: #229799; */
-  /* background: linear-gradient(45deg, #229799, #7B9386); */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  animation: gradientWave 36s ease-in-out infinite; /* 18s */
+  animation: gradientWave 60s ease-in-out infinite;
 }
 
 /* Keyframes to create a continuous wave effect */
@@ -182,6 +210,7 @@
 .navbar-menu {
   display: flex;
   justify-content: flex-end;
+  align-self: center;
 }
 
 /* 868px */
@@ -203,6 +232,7 @@
 
 .navbar-menu-item {
   padding: 1.5em 0.7em;
+  padding: 1em 0.7em;
   font-size: 1em;
   font-weight: 500;
   text-decoration: none;
@@ -275,6 +305,7 @@
   background-color: rgba(174, 196, 194, 0.3);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: none;
+  /* text-align: left; */
 
   /* check again */
   /* display: flex; */
@@ -344,6 +375,8 @@
     /* background-color: rgba(0, 77, 77, 1); */
     background-color: rgba(0, 51, 51, 0.45);
     border-radius: 0 0 1.5em 1.5em;
+    /* padding: 0.5em 2em; */
+    /* align-items: center; */
   }
 
   .dropdown.dropdown-active .navbar-menu-item {
@@ -355,15 +388,18 @@
 .dropdown-item {
   padding: 0.5em 1em;
   text-decoration: none;
+  /* text-align: left; */
   color: #f2f2f2;
   white-space: nowrap;
   font-weight: 500;
+  /* width: 100%; */
 }
 
 .dropdown-item:hover {
   background-color: rgba(22, 158, 160, 0.3);
   color: #f5f5f5;
   font-weight: 700;
+  /* border-radius: 1em */
 }
 
 .hamburger {
