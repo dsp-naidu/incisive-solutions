@@ -25,30 +25,25 @@ function HomeAbout() {
               Then your search ends here!
             </h3>
             <p>
-              Incisive Solutions is well known for providing customized data
-              entry services with high quality standards. We mainly focus on
-              providing accurate and reliable data entry services to our
-              customers with a short span of time. With 100% client retention
-              ratio, we are successful in accomplishing the satisfaction of our
-              customers.
+              Incisive Solutions is your trusted partner in Business Process
+              Management (BPM), offering a wide array of services tailored to
+              meet the needs of modern businesses. From voice and non-voice
+              processes to data management—covering data entry, processing, and
+              analysis—we ensure that every project is handled with precision
+              and efficiency.
             </p>
             <p>
-              We have a fabulous team who provides the best data entry
-              outsourcing services without compromising on the quality. The use
-              of latest technology also ensures that the customers get their
-              desired output without any additional payments. Incisive Solutions
-              is a leading offshore outsourcing company with well specialized
-              data entry specialists entrusting you with 100% accuracy in data
-              entry.
+              Our expertise also extends into IT services, including web
+              development, as well as HR-related functions, helping companies
+              streamline their operations across the board. Powered by a skilled
+              team and cutting-edge technology, we focus on delivering
+              high-quality results that drive growth and operational excellence.
             </p>
             <p>
-              Dealing with Incisive Solutions helps you to widen your base
-              knowledge about several service industries and markets, and helps
-              you to take apt decisions. We have handled numerous small and
-              large scale companies and is always a constant support for their
-              planning and development. We believe in the quote: “Always deliver
-              the most expected” and we ensure that what you expects is
-              delivered in the best possible way.
+              At Incisive Solutions, we pride ourselves on building lasting
+              partnerships by consistently exceeding client expectations.
+              Whether you&apos;re a startup or an established business, we&apos;re here to
+              support your success with customized, reliable solutions.
             </p>
           </div>
         </div>

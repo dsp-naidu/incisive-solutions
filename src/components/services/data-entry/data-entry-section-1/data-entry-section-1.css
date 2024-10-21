@@ -1,0 +1,158 @@
+.des1-spacer__60 {
+  height: 60px;
+}
+
+.data-entry-section-1-container {
+  background-color: #fff;
+  /* padding: 3em 3.125em; */
+}
+
+.data-entry-section-1-content {
+  /* flex: 0 0 35%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  padding: 3em 3.125em;
+}
+
+@media (max-width: 1200px) {
+  .data-entry-section-1-content {
+    grid-template-columns: 1fr;
+    padding: 2em;
+  }
+}
+
+@media (max-width: 604px) {
+  .data-entry-section-1-content {
+    grid-template-columns: 1fr;
+    padding: 2em 1.5em;
+  }
+}
+
+@media (max-width: 375px) {
+  .data-entry-section-1-content {
+    padding: 2em 1.25em;
+  }
+}
+
+@media (max-width: 320px) {
+  .data-entry-section-1-content {
+    grid-template-columns: 1fr;
+    padding: 2em 1em;
+  }
+}
+
+.data-entry-section-1-left {
+  /* padding: 1em 1em 0 0; */
+  text-align: left;
+}
+
+@media (max-width: 425px) {
+  .data-entry-section-1-left {
+    padding: 0;
+  }
+}
+
+.data-entry-section-1-container h1 {
+  font-size: 2em;
+  font-weight: 500;
+  padding: 0 1em;
+}
+
+@media (max-width: 425px) {
+  .data-entry-section-1-container h1 {
+    font-size: 1.75em;
+  }
+}
+
+@media (max-width: 375px) {
+  .data-entry-section-1-container h1 {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 320px) {
+  .data-entry-section-1-container h1 {
+    font-size: 1.25em;
+  }
+}
+
+.data-entry-section-1-left p {
+  color: #666;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 1.05em;
+  padding-top: 1em;
+}
+
+@media (max-width: 375px) {
+  .data-entry-section-1-left p {
+    font-size: 0.9em;
+  }
+}
+
+strong {
+  color: #555;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  font-weight: 700;
+}
+
+.data-entry-section-1-left ul {
+  padding-left: 1.5em;
+  /* Add some padding to indent the list */
+  list-style-type: disc;
+  /* Use bullet points for the list */
+  margin-top: 1em;
+  /* Add margin to separate from the paragraph above */
+}
+
+.data-entry-section-1-left ul li {
+  /* color: #444; */
+  /* Slightly darker color for better contrast */
+  font-size: 1em;
+  line-height: 1.6;
+  /* Ensure line spacing is consistent */
+  margin-bottom: 0.5em;
+  /* Add spacing between each list item */
+}
+
+@media (max-width: 768px) {
+  .data-entry-section-1-left ul {
+    padding-left: 1.25em;
+    /* Slightly reduce padding for smaller screens */
+  }
+
+  .data-entry-section-1-left ul li {
+    font-size: 0.95em;
+    /* Adjust font size for better readability on small screens */
+  }
+}
+
+.data-entry-section-1-right {
+  /* width: 50%; */
+  /* height: 50%; */
+  /* height: 540px; */
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .data-entry-section-1-right {
+    order: -1;
+  }
+}
+
+.data-entry-section-1-right img {
+  width: 100%;
+  height: 100%;
+  /* height: 100%; */
+  object-fit: cover;
+  /* border-radius: 10px; */
+  /* rotate: 180deg; */
+  border-radius: 10px;
+  /* box-shadow: inset 0px 0px 20px 20px rgba(0, 0, 0, 0.1); */
+
+}

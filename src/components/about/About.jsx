@@ -1,6 +1,7 @@
 import React from 'react';
 import './about.css';
 import AboutValues from './about-values/AboutValues';
+import AboutSection1 from './about-section-1/AboutSection1';
 
 function About() {
   return (
@@ -12,8 +13,8 @@ function About() {
       </div>
 
       <div className="about-content-wrapper">
-        <div className="about-content-container">
-          <div className="about-content-section-1">
+        {/* <div className="about-content-container">
+           <div className="about-content-section-1">
             <div className="about-content-section-1-left">
               <h1>YOUR TOP-NOTCH BPO SERVICE PROVIDER</h1>
               <p>
@@ -45,7 +46,8 @@ function About() {
               </video>
             </div>
           </div>
-        </div>
+        </div> */}
+        <AboutSection1 />
         <AboutValues />
       </div>
     </div>

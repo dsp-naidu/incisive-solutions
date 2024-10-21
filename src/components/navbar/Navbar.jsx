@@ -94,7 +94,7 @@ function Navbar() {
           Home
         </NavLink>
 
-        {/* Products Dropdown */}
+        {/* Products Dropdown
         <div
           className={`dropdown ${
             showProductsDropdown ? 'dropdown-active' : ''
@@ -127,7 +127,7 @@ function Navbar() {
               </Link>
             </div>
           )}
-        </div>
+        </div> */}
 
         {/* Services Dropdown */}
         <div
@@ -160,6 +160,15 @@ function Navbar() {
               </Link>
               <Link to="/services/data-conversion" className="dropdown-item">
                 Data Conversion
+              </Link>
+              <Link to="/services/data-analysis" className="dropdown-item">
+                Data Analysis
+              </Link>
+              <Link to="/services/web-development" className="dropdown-item">
+                Web Development
+              </Link>
+              <Link to="/services/hr-functions" className="dropdown-item">
+                HR Functions
               </Link>
             </div>
           )}

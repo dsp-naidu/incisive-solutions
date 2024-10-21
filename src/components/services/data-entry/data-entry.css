@@ -5,14 +5,14 @@
 }
 
 .data-entry-hero-container {
-  background-image: url('/assets/data-entry-hero.jpg');
+  background-image: url('/assets/data-entry-hero.jpeg');
   position: relative;
   width: 100%;
   height: 62vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: top center;
+  background-position: bottom center;
   overflow: hidden;
 }
 
@@ -23,7 +23,7 @@
   left: 0;
   width: 100%;
   height: 62vh;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.85);
   z-index: 2;
 }
 

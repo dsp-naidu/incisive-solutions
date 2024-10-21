@@ -2,6 +2,7 @@
   background-color: #030e22;
   color: #748494;
   padding: 6em 3.125em 3em 3.125em;
+  /* padding: 6em 18em; */
 }
 
 @media (max-width: 375px) {
@@ -19,9 +20,10 @@
 .footer-content {
 
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2em;
   text-align: left;
+  /* justify-items: center; */
 }
 
 @media (max-width: 1024px) {
@@ -102,6 +104,8 @@
 .footer-content ul {
   list-style: none;
 }
+
+
 
 .footer-products-container h1,
 .footer-services-container h1,

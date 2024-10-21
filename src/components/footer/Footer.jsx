@@ -14,7 +14,7 @@ function Footer() {
   return (
     <div className="footer-container">
       <div className="footer-content">
-        <div className="footer-products-container">
+        {/* <div className="footer-products-container">
           <h1>Products</h1>
           <ul>
             <li>Data movement</li>
@@ -25,18 +25,18 @@ function Footer() {
             <li>Connectors</li>
             <li>Deployment options</li>
           </ul>
-        </div>
+        </div> */}
 
         <div className="footer-services-container">
           <h1>Services</h1>
           <ul>
-            <li>Data Entry Services</li>
-            <li>Data Processing Services</li>
+            <li>Data Entry</li>
+            <li>Data Processing</li>
             <li>Data Conversion</li>
-            <li>Services</li>
-            <li>Web Research Services</li>
-            <li>Scanning and Indexing</li>
-            <li>Mortgage Services</li>
+            <li>Data Analysis</li>
+            <li>Web Development</li>
+            <li>HR Functions</li>
+            {/* <li>Mortgage Services</li> */}
           </ul>
         </div>
 

@@ -74,30 +74,33 @@ function HomeServices() {
 
         <div className="home-service-card">
           <img src="home-web-research.png" alt="Data Entry Services" />
-          <h2>WEB RESEARCH SERVICES</h2>
+          <h2>DATA ANALYSIS</h2>
           <p>
-            First impressions count! Make sure your bran works for you. We offer
-            digital marketing.
+            Unlock valuable insights with our comprehensive data analysis
+            services, turning raw data into actionable intelligence to help you
+            make informed business decisions.
           </p>
           <Link to="/data-entry">View Details</Link>
         </div>
 
         <div className="home-service-card">
           <img src="home-scanning-indexing.png" alt="Data Entry Services" />
-          <h2>SCANNING & INDEXING</h2>
+          <h2>WEB DEVELOPMENT</h2>
           <p>
-            First impressions count! Make sure your brand works for you. We
-            offer digital marketing.
+            Offering modern and responsive web development services, we build
+            dynamic websites and applications tailored to meet your business
+            needs, ensuring a seamless user experience.
           </p>
           <Link to="/data-entry">View Details</Link>
         </div>
 
         <div className="home-service-card">
           <img src="home-title-search.png" alt="Data Entry Services" />
-          <h2>TITLE SEARCH</h2>
+          <h2>HR Functions</h2>
           <p>
-            First impressions count! Make sure your brand works for you. We
-            offer digital marketing.
+            Streamline your HR operations with our end-to-end solutions, from
+            recruitment and onboarding to payroll management and employee
+            engagement, designed to enhance your workforce management.
           </p>
           <Link to="/data-entry">View Details</Link>
         </div>

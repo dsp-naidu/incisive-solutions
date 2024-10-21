@@ -27,7 +27,7 @@ function AboutValues() {
 
   return (
     <section className="about-values-container">
-      <h1>WE LIVE BY THESE VALUES</h1>
+      <h1>We Live by These Values</h1>
       <div className='about-values__spacer-40'></div>
       <div className="values-container">
         {values.map((value, index) => (
