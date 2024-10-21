@@ -42,34 +42,34 @@ function HomeServices() {
       <div className="home-services-cards">
         <div className="home-service-card">
           <img src="home-data-entry.png" alt="Data Entry Services" />
-          <h2>DATA ENTRY SERVICES</h2>
+          <h2>DATA ENTRY</h2>
           <p>
             Specialized in offering the quality-oriented and highly accurate
             data entry solutions including online, offline, excel data entry,
             and much more.
           </p>
-          <Link to="/data-entry">View Details</Link>
+          <Link to="/services/data-entry">View Details</Link>
         </div>
 
         <div className="home-service-card">
           <img src="home-data-processing.png" alt="Data Entry Services" />
-          <h2>DATA PROCESSING SERVICES</h2>
+          <h2>DATA PROCESSING</h2>
           <p>
             Dealing with the gathering, conversion, digitzation, and processing
             of the raw data into a meaningful or rather knowledgeable one.
           </p>
-          <Link to="/data-entry">View Details</Link>
+          <Link to="/services/data-processing">View Details</Link>
         </div>
 
         <div className="home-service-card">
           <img src="home-data-conversion.png" alt="Data Entry Services" />
-          <h2>DATA CONVERSION SERVICES</h2>
+          <h2>DATA CONVERSION</h2>
           <p>
             Expert in handling both the simple and challenging data conversion
             projects wherein the business data is converted into neutral digital
             formats.
           </p>
-          <Link to="/data-entry">View Details</Link>
+          <Link to="/services/data-conversion">View Details</Link>
         </div>
 
         <div className="home-service-card">
@@ -80,7 +80,7 @@ function HomeServices() {
             services, turning raw data into actionable intelligence to help you
             make informed business decisions.
           </p>
-          <Link to="/data-entry">View Details</Link>
+          <Link to="/services/data-analysis">View Details</Link>
         </div>
 
         <div className="home-service-card">
@@ -91,7 +91,7 @@ function HomeServices() {
             dynamic websites and applications tailored to meet your business
             needs, ensuring a seamless user experience.
           </p>
-          <Link to="/data-entry">View Details</Link>
+          <Link to="/services/web-development">View Details</Link>
         </div>
 
         <div className="home-service-card">
@@ -102,7 +102,7 @@ function HomeServices() {
             recruitment and onboarding to payroll management and employee
             engagement, designed to enhance your workforce management.
           </p>
-          <Link to="/data-entry">View Details</Link>
+          <Link to="/services/hr-functions">View Details</Link>
         </div>
       </div>
     </div>
