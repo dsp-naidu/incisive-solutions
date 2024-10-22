@@ -11,6 +11,10 @@
   --secondary: #9b9e9f;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   text-decoration: none;
   cursor: pointer;

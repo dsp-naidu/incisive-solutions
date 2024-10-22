@@ -70,6 +70,13 @@ function Navbar() {
     }
   };
 
+  // Close menu after selecting a link on mobile
+  const handleLinkClick = () => {
+    if (isMobileView) {
+      setIsMenuOpen(false);
+    }
+  };
+
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
@@ -90,7 +97,7 @@ function Navbar() {
       </div>
 
       <div className="navbar-menu">
-        <NavLink to="/" className="navbar-menu-item">
+        <NavLink to="/" className="navbar-menu-item" onClick={handleLinkClick}>
           Home
         </NavLink>
 
@@ -116,13 +123,13 @@ function Navbar() {
           </div>
           {showProductsDropdown && (
             <div className="dropdown-menu">
-              <Link to="/products/product1" className="dropdown-item">
+              <Link to="/products/product1" className="dropdown-item" onClick={handleLinkClick}>
                 Product 1
               </Link>
-              <Link to="/products/product2" className="dropdown-item">
+              <Link to="/products/product2" className="dropdown-item" onClick={handleLinkClick}>
                 Product 2
               </Link>
-              <Link to="/products/product3" className="dropdown-item">
+              <Link to="/products/product3" className="dropdown-item" onClick={handleLinkClick}>
                 Product 3
               </Link>
             </div>
@@ -152,37 +159,73 @@ function Navbar() {
 
           {showServicesDropdown && (
             <div className="dropdown-menu">
-              <Link to="/services/data-entry" className="dropdown-item">
+              <Link
+                to="/services/data-entry"
+                className="dropdown-item"
+                onClick={handleLinkClick}
+              >
                 Data Entry
               </Link>
-              <Link to="/services/data-processing" className="dropdown-item">
+              <Link
+                to="/services/data-processing"
+                className="dropdown-item"
+                onClick={handleLinkClick}
+              >
                 Data Processing
               </Link>
-              <Link to="/services/data-conversion" className="dropdown-item">
+              <Link
+                to="/services/data-conversion"
+                className="dropdown-item"
+                onClick={handleLinkClick}
+              >
                 Data Conversion
               </Link>
-              <Link to="/services/data-analysis" className="dropdown-item">
+              <Link
+                to="/services/data-analysis"
+                className="dropdown-item"
+                onClick={handleLinkClick}
+              >
                 Data Analysis
               </Link>
-              <Link to="/services/web-development" className="dropdown-item">
+              <Link
+                to="/services/web-development"
+                className="dropdown-item"
+                onClick={handleLinkClick}
+              >
                 Web Development
               </Link>
-              <Link to="/services/hr-functions" className="dropdown-item">
+              <Link
+                to="/services/hr-functions"
+                className="dropdown-item"
+                onClick={handleLinkClick}
+              >
                 HR Functions
               </Link>
             </div>
           )}
         </div>
 
-        <NavLink to="team" className="navbar-menu-item">
+        <NavLink
+          to="team"
+          className="navbar-menu-item"
+          onClick={handleLinkClick}
+        >
           Team
         </NavLink>
 
-        <NavLink to="contact" className="navbar-menu-item">
+        <NavLink
+          to="contact"
+          className="navbar-menu-item"
+          onClick={handleLinkClick}
+        >
           Contact
         </NavLink>
 
-        <NavLink to="about" className="navbar-menu-item">
+        <NavLink
+          to="about"
+          className="navbar-menu-item"
+          onClick={handleLinkClick}
+        >
           About
         </NavLink>
       </div>
