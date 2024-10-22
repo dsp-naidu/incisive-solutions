@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import HomeHero from './home-hero/HomeHero';
 import HomeAbout from './home-about/HomeAbout';
 import HomeServices from './home-services/HomeServices';
@@ -9,15 +10,21 @@ import HomeContact from './home-contact/HomeContact';
 
 function Home() {
   return (
-    <div>
-      <HomeHero />
-      <HomeAbout />
-      <HomeServices />
-      <HomeWorkFlow />
-      <HomeFeatures />
-      <HomeContactHero />
-      <HomeContact />
-    </div>
+    <main>
+      <Helmet>
+        <title>Incisive Solutions</title>
+      </Helmet>
+
+      <div>
+        <HomeHero />
+        <HomeAbout />
+        <HomeServices />
+        <HomeWorkFlow />
+        <HomeFeatures />
+        <HomeContactHero />
+        <HomeContact />
+      </div>
+    </main>
   );
 }
 

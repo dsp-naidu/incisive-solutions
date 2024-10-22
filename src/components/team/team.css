@@ -97,3 +97,7 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 2.25%;
 }
+
+.our-team-content-wrapper {
+  background-color: #E5E5E5;
+}
