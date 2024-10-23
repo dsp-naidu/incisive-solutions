@@ -63,4 +63,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 For any **business-related queries**, feel free to [contact Incisive Solutions](mailto:info@incisivesolutions.com).
 
-For **development-related** or **project-specific issues**, feel free to reach out to the [developer](madhavarayulu@gmail.com).
+For **development-related** or **project-specific issues**, feel free to reach out to the [developer](mailto:madhavarayulu@gmail.com).
