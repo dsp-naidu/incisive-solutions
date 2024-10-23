@@ -3,14 +3,14 @@ import './home-hero.css';
 
 function HomeHero() {
   const texts = [
-    { text: 'Data Entry', color: '#3375FF', fontWeight: '600' },
-    { text: 'Data Processing', color: '#FF5733', fontWeight: '600' },
-    { text: 'Data Conversion', color: '#FFC300', fontWeight: '600' },
-    { text: 'Data Analysis', color: '#3375FF', fontWeight: '600' },
-    { text: 'Web Development', color: '#FF3333', fontWeight: '600' },
-    { text: 'HR Outsourcing', color: '#FF5733', fontWeight: '600' },
-    { text: 'Incisive', color: '#33C4FF', fontWeight: '600' },
-    { text: 'Custom IT', color: '#FFF', fontWeight: '300' },
+    { text: 'Data Entry', color: '#3375FF' },
+    { text: 'Data Processing', color: '#FF5733' },
+    { text: 'Data Conversion', color: '#FFC300' },
+    { text: 'Data Analysis', color: '#3375FF' },
+    { text: 'Web Development', color: '#FF3333' },
+    { text: 'HR Outsourcing', color: '#FF5733' },
+    { text: 'Incisive', color: '#33C4FF' },
+    { text: 'Custom IT', color: '#FFF' },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -44,7 +44,6 @@ function HomeHero() {
           <span
             style={{
               color: texts[currentIndex].color,
-              fontWeight: texts[currentIndex].fontWeight,
             }}
           >
             {texts[currentIndex].text}
