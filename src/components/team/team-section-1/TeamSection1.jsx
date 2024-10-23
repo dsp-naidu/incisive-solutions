@@ -11,7 +11,10 @@ function TeamSection1() {
       <div className="team-grid">
         <div className="team-card">
           <div className="team-card-container">
-            <div className="team-member-image-container"></div>
+            <div
+              className="team-member-image-container"
+              style={{ backgroundImage: 'url(/assets/ramesh.png)' }}
+            ></div>
             <p className="team-member-name">Ramesh B</p>
             <p className="team-member-about">
               With over 18 years of experience in the IT industry, he is
@@ -35,7 +38,10 @@ function TeamSection1() {
 
         <div className="team-card">
           <div className="team-card-container">
-            <div className="team-member-image-container"></div>
+            <div
+              className="team-member-image-container"
+              style={{ backgroundImage: 'url(/assets/siva.png)' }}
+            ></div>
             <p className="team-member-name">Siva Prasad D </p>
             <p className="team-member-about">
               As a seasoned Managing Director with over 20 years in the
@@ -57,7 +63,10 @@ function TeamSection1() {
 
         <div className="team-card">
           <div className="team-card-container">
-            <div className="team-member-image-container"></div>
+            <div
+              className="team-member-image-container"
+              style={{ backgroundImage: 'url(/assets/suneetha.png)' }}
+            ></div>
             <p className="team-member-name">Suneetha D</p>
             <p className="team-member-about">
               As the Head of Operations with over 13 years of experience in the
@@ -79,7 +88,10 @@ function TeamSection1() {
 
         <div className="team-card">
           <div className="team-card-container">
-            <div className="team-member-image-container"></div>
+            <div
+              className="team-member-image-container"
+              style={{ backgroundImage: 'url(/assets/lavanya.png)' }}
+            ></div>
             <p className="team-member-name">Lavanya B</p>
             <p className="team-member-about">
               With over 8 years of experience in the IT industry, she is
