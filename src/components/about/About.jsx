@@ -14,7 +14,8 @@ function About() {
       <div className="about-container">
         <div className="about-hero-container">
           <div className="about-hero-heading">
-            <h1>About Us</h1>
+            {/* <h1>About Us</h1> */}
+            <h1>Welcome to Incisive Solutions!</h1>
           </div>
         </div>
 

@@ -1,6 +1,11 @@
 .footer-container {
   background-color: #030e22;
+  background-color: #021112;
+  background-color: #0d1313;
+  background-color: #030808;
+  background-color: #010B0B;
   color: #748494;
+  color: #8d9696;
   padding: 6em 3.125em 3em 3.125em;
   padding: 6em 1em 3em 1em;
   /* padding: 6em; */
@@ -247,6 +252,12 @@
   padding-top: 1em;
 }
 
+.footer-about-social-media span:hover {
+  color: #4CAFAD;
+  transform: scale(1.1);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
 @media (max-width: 1024px) {
   .footer-about .footer-about-social-media {
     justify-content: flex-start;
@@ -281,4 +292,16 @@
 
 .footer-trademark {
   padding-top: 3em;
+  text-align: center;
+  color: #B0C4DE;
+  /* font-size: 0.9em; */
 }
+
+.footer-main-text {
+  color: #E0E0E0;
+}
+
+.footer-secondary-text {
+  color: #A0A0A0;
+}
+

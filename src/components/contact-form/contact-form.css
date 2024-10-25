@@ -3,6 +3,7 @@
   padding: 1.5em;
   /* background-color: #f9f9f9; */
   background-color: #fff;
+  background-color: #f1f1f1;
   border-radius: 0.5em;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   max-width: 100%;
@@ -174,6 +175,8 @@
   font-weight: 700;
   background-color: #169ea0;
   color: #f2f2f2;
+  background-color: #128587;
+  color: #c0dada;
   border: none;
   border-radius: 0.25em;
   cursor: pointer;
@@ -190,8 +193,10 @@
 .contact-form button:hover,
 .contact-form button:focus {
   background-color: #0f7678;
-  font-size: 1.225em;
+  /* font-size: 1.225em; */
   color: #fff;
+  background-color: #0c585a;
+  color: #dfe6e6;
 }
 
 .contact-form button:active {

@@ -3,15 +3,25 @@ import './home-hero.css';
 
 function HomeHero() {
   const texts = [
-    { text: 'Data Entry', color: '#3375FF' },
-    { text: 'Data Processing', color: '#FF5733' },
-    { text: 'Data Conversion', color: '#FFC300' },
-    { text: 'Data Analysis', color: '#3375FF' },
-    { text: 'Web Development', color: '#FF3333' },
-    { text: 'HR Outsourcing', color: '#FF5733' },
-    { text: 'Incisive', color: '#33C4FF' },
+    { text: 'Data Entry', color: '#C7FF33' },
+    { text: 'Data Processing', color: '#00FFFF' },
+    { text: 'Data Conversion', color: '#FF00FF' },
+    { text: 'Data Analysis', color: '#A1F1F2' },
+    { text: 'Web Development', color: '#3BC4C5' },
+    { text: 'HR Outsourcing', color: '#FF69B4' },
+    { text: 'Incisive', color: '#26aaad' },
     { text: 'Custom IT', color: '#FFF' },
   ];
+  // const texts = [
+  //   { text: 'Data Entry', color: '#0059ff' },
+  //   { text: 'Data Processing', color: '#00ff27' },
+  //   { text: 'Data Conversion', color: '#ffa600' },
+  //   { text: 'Data Analysis', color: '#0059ff' },
+  //   { text: 'Web Development', color: '#00ff27' },
+  //   { text: 'HR Outsourcing', color: '#ffa600' },
+  //   { text: 'Incisive', color: '#26aaad' },
+  //   { text: 'Custom IT', color: '#FFF' },
+  // ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 

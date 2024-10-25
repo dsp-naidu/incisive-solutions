@@ -1,16 +1,36 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import './hr-functions-section-1.css';
 
 function HRFunctionsSection1() {
+  const cardRef = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const cards = cardRef.current.querySelectorAll('.hr-functions-card');
+    cards.forEach((card) => observer.observe(card));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="hr-functions-section-1-container">
+    <section className="hr-functions-section-1-container" ref={cardRef}>
       <div className="hfs1-spacer__60"></div>
       <h1>Streamlining Your HR Processes for Enhanced Efficiency</h1>
 
       <div className="hr-functions-section-1-content">
         <div className="hr-functions-section-1-left">
           {/* <h1>YOUR TOP-NOTCH BPO SERVICE PROVIDER</h1> */}
-          <p>
+          <p className="hr-functions-card">
             At <strong>Incisive Solutions</strong>, we recognize that effective
             human resource management is essential for organizational success.
             Our <strong>HR Functions Services</strong> are designed to
@@ -18,7 +38,8 @@ function HRFunctionsSection1() {
             your core business while we handle the complexities of HR
             management.
           </p>
-          <p>
+
+          <p className="hr-functions-card">
             Our services include:
             <ul>
               <li>
@@ -53,7 +74,8 @@ function HRFunctionsSection1() {
               </li>
             </ul>
           </p>
-          <p>
+
+          <p className="hr-functions-card">
             At <strong>Incisive Solutions</strong>, our experienced HR
             professionals work closely with you to understand your unique needs,
             providing tailored solutions that enhance your HR functions. By
@@ -63,7 +85,7 @@ function HRFunctionsSection1() {
         </div>
 
         <div className="hr-functions-section-1-right">
-          <img src="/assets/hr-functions-section-1.jpeg" />
+          <img src="/assets/hr-functions-section-1.png" />
         </div>
       </div>
     </section>

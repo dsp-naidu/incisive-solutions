@@ -1,15 +1,36 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import './data-processing-section-1.css';
 
 function DataProcessingSection1() {
+  const cardRef = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const cards = cardRef.current.querySelectorAll('.data-processing-card');
+    cards.forEach((card) => observer.observe(card));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="data-processing-section-1-container">
+    <section className="data-processing-section-1-container" ref={cardRef}>
       <div className="dps1-spacer__60"></div>
       <h1>Transforming Raw Data into Valuable Insights</h1>
+
       <div className="data-processing-section-1-content">
         <div className="data-processing-section-1-left">
           {/* <h1>YOUR TOP-NOTCH BPO SERVICE PROVIDER</h1> */}
-          <p>
+          <p className="data-processing-card">
             At <strong>Incisive Solutions</strong>, we specialize in turning
             vast amounts of raw data into meaningful and actionable information.
             Our <strong>Data Processing Services</strong> are designed to help
@@ -17,7 +38,8 @@ function DataProcessingSection1() {
             and enhance overall productivity by processing data efficiently and
             accurately.
           </p>
-          <p>
+
+          <p className="data-processing-card">
             Our services include:
             <ul>
               <li>
@@ -49,7 +71,7 @@ function DataProcessingSection1() {
               </li>
             </ul>
           </p>
-          <p>
+          <p className="data-processing-card">
             At <strong>Incisive Solutions</strong>, we leverage the latest
             technology to provide fast, accurate, and secure data processing
             services. Whether you need to handle small datasets or process

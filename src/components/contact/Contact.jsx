@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import './contact.css';
 import ContactForm from '../contact-form/ContactForm';
 import { FaEnvelope, FaLocationDot, FaPhone } from 'react-icons/fa6';
 
 function Contact() {
+  const [formOpacity, setFormOpacity] = useState(0.9);
   return (
     <main>
       <Helmet>
@@ -44,7 +45,7 @@ function Contact() {
                   <p>Visakhapatnam - 530051, Andhra Pradesh, India</p>
                   <br />
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d474.8900439426756!2d83.21587273491818!3d17.786040000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3967a851c182cd%3A0x42fb4ceef0ae5fba!2s6-16%2C%20NAD%20Colony%2C%20Krishnarayapuram%2C%20Vepagunta%2C%20Visakhapatanam%2C%20Visakhapatnam%2C%20Andhra%20Pradesh%20530047!5e0!3m2!1sen!2sin!4v1729572150573!5m2!1sen!2sin"
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d949.7799215668816!2d83.21564226951601!3d17.786071275953496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDQ3JzA5LjkiTiA4M8KwMTInNTguNiJF!5e0!3m2!1sen!2sin!4v1729856483246!5m2!1sen!2sin"
                     width="100%"
                     height="100%"
                     style={{ border: 0, borderRadius: '10px', opacity: 0.8 }}
@@ -76,7 +77,15 @@ function Contact() {
                 </div>
               </div>
             </div>
-            <div className="contact-page-form">
+            <div
+              className="contact-page-form"
+              style={{
+                opacity: formOpacity,
+                transition: 'opacity 0.5s ease-in-out',
+              }}
+              onMouseEnter={() => setFormOpacity(1)}
+              onMouseLeave={() => setFormOpacity(0.9)}
+            >
               <ContactForm />
             </div>
           </div>

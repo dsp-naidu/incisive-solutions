@@ -1,16 +1,36 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import './data-analysis-section-1.css';
 
 function DataAnalysisSection1() {
+  const cardRef = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const cards = cardRef.current.querySelectorAll('.data-analysis-card');
+    cards.forEach((card) => observer.observe(card));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="data-analysis-section-1-container">
+    <section className="data-analysis-section-1-container" ref={cardRef}>
       <div className="das1-spacer__60"></div>
       <h1>Unlocking Insights for Informed Decision-Making</h1>
 
       <div className="data-analysis-section-1-content">
         <div className="data-analysis-section-1-left">
           {/* <h1>YOUR TOP-NOTCH BPO SERVICE PROVIDER</h1> */}
-          <p>
+          <p className="data-analysis-card">
             In today&apos;s data-driven world, making sense of vast amounts of
             information is crucial for business success. At{' '}
             <strong>Incisive Solutions</strong>, our{' '}
@@ -18,7 +38,8 @@ function DataAnalysisSection1() {
             organizations transform data into actionable insights, enabling
             informed decision-making and strategic planning.
           </p>
-          <p>
+
+          <p className="data-analysis-card">
             Our services include:
             <ul>
               <li>
@@ -49,7 +70,8 @@ function DataAnalysisSection1() {
               </li>
             </ul>
           </p>
-          <p>
+
+          <p className="data-analysis-card">
             At <strong>Incisive Solutions</strong>, we combine advanced
             analytical techniques with industry expertise to deliver
             comprehensive data analysis solutions. Our team works closely with

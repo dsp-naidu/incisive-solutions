@@ -36,7 +36,7 @@ function HomeServices() {
   return (
     <div className="home-services-container">
       <div className="home-services-heading">
-        <h1>OUR SERVICES</h1>
+        <h1>Our Services</h1>
       </div>
 
       <div className="home-services-cards">

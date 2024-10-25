@@ -1,5 +1,6 @@
 .team-section-1-container {
   background-color: #e5e5e5;
+  background-color: #000202;
 }
 
 .ts1-spacer__60 {
@@ -10,6 +11,10 @@
   /* font-size: 3.5em; */
   font-size: 2.5em;
   line-height: 1.1;
+  /* color: #00CED1;
+  color: #5FD1D7;
+  color: #F0F0F0; */
+  color: #D3D3D3;
 }
 
 .team-grid {
@@ -43,12 +48,21 @@
 }
 
 .team-card {
-  background-color: #fff;
+  /* background-color: #fff; */
+  background: linear-gradient(135deg, #0d5c63, #2e8b57);
   box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.2);
-  color: #111;
+  /* color: #111; */
+  color: #e5e5e5;
   border-radius: 15px;
   text-align: center;
   min-width: 250px;
+  transition: background 0.3s ease, opacity 0.3s ease;
+}
+
+.team-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  /* Glass effect */
+  backdrop-filter: blur(10px);
 }
 
 .team-card-container {
@@ -75,18 +89,21 @@
 
 .team-member-name {
   font-size: 1.5em;
-  font-weight: 500;
+  /* font-weight: 500; */
+  font-weight: 600;
+  color: #fff;
   margin: 47px auto 0;
+  margin-top: 20px;
 }
 
 .team-member-about {
   color: #333;
-  font-style: italic;
+  color: #ddd;
+  /* font-style: italic; */
   font-size: 0.9em;
   line-height: 1.6;
   /* margin: 30px 0 0; */
   margin: 20px 0;
-  word-wrap: break-word;
   text-align: left;
 }
 
@@ -94,15 +111,18 @@
   font-style: italic;
   font-size: 1.1em;
   margin: 20px 0;
+  margin: 15px 0;
   color: #555;
+  color: #aaa;
 }
 
 .team-member-designation {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-size: 1em;
   font-weight: 700;
+  color: #e5e5e5;
   /* letter-spacing: 1.5px; */
-  margin: 12px auto 0;
+  /* margin: 12px auto 0; */
   line-height: 1.6;
   word-wrap: break-word;
   margin: auto auto 0;
@@ -119,11 +139,17 @@
   min-width: 68px;
   /* margin: 30px auto 0; */
   margin: auto auto 0;
+  margin-top: 20px;
 }
 
 .team-s1-social-icons {
   cursor: pointer;
+  color: #e5e5e5;
+  transition: color 0.2s;
+}
 
+.team-s1-social-icons:hover {
+  color: #87CEFA;
 }
 
 .ts1-spacer__40 {

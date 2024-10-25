@@ -5,7 +5,7 @@ import { FaChevronDown, FaChevronUp } from 'react-icons/fa'; // For arrows
 const accordionData = [
   {
     id: '1',
-    title: '24*7 availability',
+    title: '24/7 availability',
     content:
       'Our team at Incisive Solutions works around the clock and thus you can apporach us at any time of the day. You are welcome to come up with the query according to your need.',
   },

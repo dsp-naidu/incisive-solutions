@@ -1,6 +1,8 @@
 .home-about-wrapper {
   background-color: #030E22;
   background: linear-gradient(45deg, #229799, #000);
+  background: linear-gradient(145deg, #000202, #1c4e4f, #0a2d2e, #072627, #051f1f, #031818, #021112, #010b0b, #010606, #000202, #000101, #000);
+  background: linear-gradient(135deg, #00324f, #000202 #000);
 }
 
 .home-about-container {
@@ -11,7 +13,7 @@
   text-align: center;
   position: relative;
   background-color: rgba(0, 0, 0, 0.8);
-
+  /* background-color: #000; */
 }
 
 @media (max-width: 768px) {
@@ -48,6 +50,12 @@
   font-weight: 700;
   color: #169ea0;
 }
+
+.home-about-heading h1:hover {
+  color: #1ed5d7;
+  transition: color 0.3s ease;
+}
+
 
 @media (max-width: 768px) {
   .home-about-heading h1 {
@@ -141,6 +149,7 @@
   font-size: 1.5em;
   margin-bottom: 1em;
   color: #e6e6e6;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 @media (max-width: 768px) {
@@ -160,6 +169,8 @@
   line-height: 1.6;
   /* color: #333; */
   color: #cccccc;
+  color: #e0e0e0;
+  color: rgba(255, 255, 255, 0.6);
   padding-bottom: 1em;
 }
 

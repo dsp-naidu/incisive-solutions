@@ -1,4 +1,4 @@
-/* Container */
+
 .home-contact-hero-container {
   position: relative;
   width: 100%;
@@ -6,7 +6,6 @@
   overflow: hidden;
 }
 
-/* Full-width Hero Image */
 .home-contact-hero-image {
   width: 100%;
   height: 100%;
@@ -18,7 +17,6 @@
   z-index: 1;
 }
 
-/* Dark overlay for better text visibility */
 .home-contact-hero-container::before {
   content: '';
   position: absolute;
@@ -26,25 +24,21 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 2, 2, 0.8);
   z-index: 2;
 }
 
-/* Centering the text */
 .home-contact-hero-text {
   position: relative;
   z-index: 3;
-  color: #fff;
+  color: #e4e8e8;
   text-align: center;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* max-width: 600px;
-  padding: 0 20px; */
   max-width: 90%;
 }
 
-/* Heading styles */
 .home-contact-hero-text h1 {
   font-size: 3em;
   font-weight: 600;
@@ -63,11 +57,11 @@
   }
 }
 
-/* Paragraph styles */
 .home-contact-hero-text p {
   font-size: 1.3em;
   margin-bottom: 3em;
   margin: 0 4em 3em 4em;
+  color: #cad1d1;
 }
 
 @media (max-width: 556px) {
@@ -83,23 +77,20 @@
   }
 }
 
-/* Button styles */
 .home-contact-btn {
   background-color: #128587;
-  color: #d9d9d9;
+  color: #c0dada;
   padding: 0.8em 1.5em;
   font-size: 1.1em;
   font-weight: 700;
   text-decoration: none;
   border-radius: 0.3em;
-  /* transition: background-color 0.3s ease, font-size 0.3s ease, color 0.3s ease, transform 0.2s ease; */
 }
 
 .home-contact-btn:hover,
 .home-contact-btn:focus {
   background-color: #0c585a;
-  font-size: 1.125em;
-  color: #f2f2f2;
+  color: #dfe6e6;
 }
 
 

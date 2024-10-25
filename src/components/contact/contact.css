@@ -10,7 +10,6 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
-  /* color: snow; */
 }
 
 .contact-container::before {
@@ -28,16 +27,8 @@
   position: relative;
   z-index: 3;
   color: #fff;
-  /* top: -20%; */
-  /* right: 10%; */
   margin: 10em 0;
 }
-
-/* @media (max-width: 768px) {
-  .contact-hero-heading {
-    margin: 6em;
-  }
-} */
 
 .contact-hero-heading h1 {
   font-size: 2em;
@@ -71,13 +62,9 @@
 .contact-content-wrapper {
   position: relative;
   z-index: 3;
-  /* filter: blur(10px); */
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.8);
   text-align: center;
-  /* top: 60%; */
   padding: 3em 3.125em;
-  /* margin-top: 6%; */
-
   align-items: flex-start;
   width: 100%;
 }
@@ -124,7 +111,6 @@
 }
 
 .contact-content-info {
-  color: #fff;
   text-align: left;
   padding-top: 1em;
   display: flex;
@@ -137,6 +123,7 @@
   font-weight: 300;
   padding-bottom: 1em;
   text-align: left;
+  color: #CCCCCC;
 }
 
 @media (max-width: 768px) {
@@ -185,24 +172,25 @@
   }
 }
 
-.contact-content-communication-section svg {
+.contact-content-communication-section span svg {
   font-size: 1.5em;
+  color: #00A3AD;
 }
 
 @media (max-width: 768px) {
-  .contact-content-communication-section svg {
+  .contact-content-communication-section span svg {
     font-size: 1.3em;
   }
 }
 
 @media (max-width: 425px) {
-  .contact-content-communication-section svg {
+  .contact-content-communication-section span svg {
     font-size: 1.25em;
   }
 }
 
 @media (max-width: 375px) {
-  .contact-content-communication-section svg {
+  .contact-content-communication-section span svg {
     font-size: 1em;
   }
 }
@@ -210,6 +198,7 @@
 .contact-content-communication-section h2 {
   font-size: 1.75em;
   align-self: baseline;
+  color: #D3D3D3;
 }
 
 @media (max-width: 768px) {
@@ -233,10 +222,16 @@
 .contact-content-communication-section p {
   font-size: 1.05em;
   font-weight: 300;
+  color: #E0E0E0;
 }
 
 @media (max-width: 425px) {
   .contact-content-communication-section p {
     font-size: 1em;
   }
+}
+
+.contact-content-communication-section h2:hover,
+.contact-content-communication-section span svg:hover {
+  color: #5FD1D7;
 }

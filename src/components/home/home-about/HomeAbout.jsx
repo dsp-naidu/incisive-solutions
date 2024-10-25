@@ -7,8 +7,8 @@ function HomeAbout() {
     <div className="home-about-wrapper">
       <div className="home-about-container">
         <div className="home-about-heading">
-          <h1>INCISIVE SOLUTIONS</h1>
-          <h2>AN OFFSHORE OUTSOURCING COMPANY</h2>
+          <h1>Incisive Solutions</h1>
+          <h2>An Offshore Outsourcing Company</h2>
         </div>
 
         <div className="home-about-content">
@@ -42,8 +42,9 @@ function HomeAbout() {
             <p>
               At Incisive Solutions, we pride ourselves on building lasting
               partnerships by consistently exceeding client expectations.
-              Whether you&apos;re a startup or an established business, we&apos;re here to
-              support your success with customized, reliable solutions.
+              Whether you&apos;re a startup or an established business,
+              we&apos;re here to support your success with customized, reliable
+              solutions.
             </p>
           </div>
         </div>

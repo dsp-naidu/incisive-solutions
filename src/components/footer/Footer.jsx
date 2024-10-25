@@ -15,8 +15,8 @@ function Footer() {
     <div className="footer-container">
       <div className="footer-content">
         <div className="footer-about">
-          <h1>Incisive Solutions</h1>
-          <img src="is-logo.png" />
+          <h1 className="footer-main-text">Incisive Solutions</h1>
+          <img src="/assets/is-logo.png" />
           {/* <p>Transform your business with our custom IT solutions.</p> */}
           <div className="footer-about-social-media">
             <span>
@@ -47,8 +47,8 @@ function Footer() {
         </div> */}
 
         <div className="footer-services-container">
-          <h1>Services</h1>
-          <ul>
+          <h1 className="footer-main-text">Services</h1>
+          <ul className="footer-secondary-text">
             <li>Data Entry</li>
             <li>Data Processing</li>
             <li>Data Conversion</li>
@@ -60,14 +60,14 @@ function Footer() {
         </div>
 
         <div className="footer-contact">
-          <h1>Contact</h1>
+          <h1 className="footer-main-text">Contact</h1>
 
           <div className="footer-contact-address-container">
             <span>
               <FaLocationDot />
             </span>
 
-            <div className="footer-contact-address">
+            <div className="footer-contact-address footer-secondary-text">
               <p>6-16, NAD Colony,</p>
               <p>Krishnarayapuram, Vepagunta,</p>
               <p>Visakhapatnam - 530051,</p>
@@ -75,14 +75,14 @@ function Footer() {
             </div>
           </div>
 
-          <div className="footer-contact-email-container">
+          <div className="footer-contact-email-container footer-secondary-text">
             <span>
               <FaEnvelope />
             </span>
             <p>info@incisivesolutions.in</p>
           </div>
 
-          <div className="footer-contact-phone-container">
+          <div className="footer-contact-phone-container footer-secondary-text">
             <span>
               <FaPhone />
             </span>
@@ -92,7 +92,7 @@ function Footer() {
 
         <div className="footer-map">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d474.8900439426756!2d83.21587273491818!3d17.786040000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3967a851c182cd%3A0x42fb4ceef0ae5fba!2s6-16%2C%20NAD%20Colony%2C%20Krishnarayapuram%2C%20Vepagunta%2C%20Visakhapatanam%2C%20Visakhapatnam%2C%20Andhra%20Pradesh%20530047!5e0!3m2!1sen!2sin!4v1729572150573!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d949.7799215668816!2d83.21564226951601!3d17.786071275953496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDQ3JzA5LjkiTiA4M8KwMTInNTguNiJF!5e0!3m2!1sen!2sin!4v1729856483246!5m2!1sen!2sin"
             width="100%"
             height="100%"
             style={{ border: 0, borderRadius: '10px', opacity: 0.8 }}

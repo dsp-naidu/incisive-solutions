@@ -1,16 +1,36 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import './data-entry-section-1.css';
 
 function DataEntrySection1() {
+  const cardRef = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const cards = cardRef.current.querySelectorAll('.data-entry-card');
+    cards.forEach((card) => observer.observe(card));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="data-entry-section-1-container">
+    <section className="data-entry-section-1-container" ref={cardRef}>
       <div className="des1-spacer__60"></div>
       <h1>Precision and Efficiency in Every Keystroke</h1>
 
       <div className="data-entry-section-1-content">
         <div className="data-entry-section-1-left">
           {/* <h1>YOUR TOP-NOTCH BPO SERVICE PROVIDER</h1> */}
-          <p>
+          <p className='data-entry-card'>
             At <strong>Incisive Solutions</strong>, we understand that accurate
             and efficient data entry is the backbone of smooth business
             operations. Our specialized <strong>Data Entry Services</strong> are
@@ -20,7 +40,7 @@ function DataEntrySection1() {
             large-scale or small-scale data management tasks.
           </p>
 
-          <p>
+          <p className='data-entry-card'>
             Our services include:
             <ul>
               <li>
@@ -51,7 +71,7 @@ function DataEntrySection1() {
             </ul>
           </p>
 
-          <p>
+          <p className='data-entry-card'>
             Our <strong>team of experts</strong> ensures that all data entry
             tasks are performed with a high degree of{' '}
             <strong>confidentiality</strong> and <strong>security</strong>, so

@@ -31,8 +31,10 @@
 }
 
 .navbar-logo h1 {
-  font-size: 2.25em; /* 1.75em */
-  font-weight: 900; /* 500 */
+  font-size: 2.25em;
+  /* 1.75em */
+  font-weight: 900;
+  /* 500 */
   letter-spacing: 0.125em;
   /* background: linear-gradient(45deg,
       #229799, #229799, #0C4D4E, #0C4D4E, #7B9386, #7B9386, #3D4A43, #3D4A43, #229799, #229799); */
@@ -61,8 +63,12 @@
 
 .navbar-logo h1,
 .navbar-logo i {
+  /* background: linear-gradient(45deg,
+      #229799, #229799, #0C4D4E, #0C4D4E, #7B9386, #7B9386, #3D4A43, #3D4A43, #229799, #229799); */
   background: linear-gradient(45deg,
-      #229799, #229799, #0C4D4E, #0C4D4E, #7B9386, #7B9386, #3D4A43, #3D4A43, #229799, #229799);
+      #229799, #229799, #0C4D4E, #0C4D4E, #229799, #229799);
+  /* background: linear-gradient(45deg,
+      #169ea0, #1cc8ca, #22f2f5, #042020, #0a4a4b, #107475); */
   background-size: 400%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -247,7 +253,8 @@
 .navbar-menu-item:focus,
 .navbar-menu-item.dropdown-active,
 .active {
-  color: #169ea0; /* rgba(22, 158, 160, 1) */
+  color: #169ea0;
+  /* rgba(22, 158, 160, 1) */
   font-weight: 700;
 }
 
@@ -304,6 +311,8 @@
   left: 0;
   background-color: rgba(174, 196, 194, 0.3);
   background-color: black;
+  background-color: #000202;
+  background-color: rgba(0, 2, 2, 0.975);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: none;
   text-align: left;

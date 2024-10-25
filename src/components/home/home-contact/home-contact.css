@@ -1,11 +1,11 @@
-/* Home Contact Section */
+
 .home-contact-container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   padding: 3.25em 3.125em;
   gap: 3em;
-  background-color: #F1F1F1;
+  background-color: #000202;
 }
 
 @media (max-width: 901px) {
@@ -69,7 +69,7 @@
 
 .home-contact-section-one p {
   font-size: 1.15em;
-  color: #666;
+  color: rgba(255, 255, 255, 0.8);
   margin: 1em 0 3em 0;
   text-align: left;
 }

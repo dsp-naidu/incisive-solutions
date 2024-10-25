@@ -1,16 +1,36 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import './web-dev-section-1.css';
 
 function WebDevSection1() {
+  const cardRef = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const cards = cardRef.current.querySelectorAll('.web-dev-card');
+    cards.forEach((card) => observer.observe(card));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="web-dev-section-1-container">
+    <section className="web-dev-section-1-container" ref={cardRef}>
       <div className="wds1-spacer__60"></div>
       <h1>Building Dynamic and User-Centric Digital Experiences</h1>
 
       <div className="web-dev-section-1-content">
         <div className="web-dev-section-1-left">
           {/* <h1>YOUR TOP-NOTCH BPO SERVICE PROVIDER</h1> */}
-          <p>
+          <p className="web-dev-card">
             In the fast-paced digital landscape, having a robust online presence
             is vital for business success. At{' '}
             <strong>Incisive Solutions</strong>, our{' '}
@@ -18,7 +38,8 @@ function WebDevSection1() {
             high-quality, scalable, and user-friendly websites that effectively
             represent your brand and engage your audience.
           </p>
-          <p>
+
+          <p className="web-dev-card">
             Our services include:
             <ul>
               <li>
@@ -51,7 +72,8 @@ function WebDevSection1() {
               </li>
             </ul>
           </p>
-          <p>
+
+          <p className="web-dev-card">
             At <strong>Incisive Solutions</strong>, we leverage the latest
             technologies and best practices in web development to deliver
             solutions that not only meet your goals but also provide a seamless

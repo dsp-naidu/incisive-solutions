@@ -4,7 +4,9 @@
 
 .data-conversion-section-1-container {
   background-color: #fff;
+  background-color: #000202;
   /* padding: 3em 3.125em; */
+  padding-bottom: 3em;
 }
 
 .data-conversion-section-1-content {
@@ -155,4 +157,65 @@ strong {
   border-radius: 10px;
   /* box-shadow: inset 0px 0px 20px 20px rgba(0, 0, 0, 0.1); */
 
+}
+
+.data-conversion-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5em;
+  margin-top: 1em;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.data-conversion-card.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.data-conversion-card:hover {
+  box-shadow: 0px 6px 15px rgba(51, 98, 204, 0.4);
+}
+
+.data-conversion-section-1-container h1 {
+  font-size: 2em;
+  font-weight: 500;
+  color: #3362CC;
+  /* Highlighted color */
+}
+
+.data-conversion-section-1-left p,
+.data-conversion-section-1-left ul li {
+  color: #aaa;
+  font-size: 1.05em;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+.data-conversion-section-1-left p:hover,
+.data-conversion-section-1-left ul li:hover {
+  color: #ddd;
+  /* Color on hover */
+}
+
+.data-conversion-section-1-left strong {
+  color: #3362CC;
+  /* Use highlight color for emphasis */
+  font-weight: 700;
+}
+
+.data-conversion-section-1-right img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .data-conversion-section-1-content {
+    grid-template-columns: 1fr;
+  }
 }
