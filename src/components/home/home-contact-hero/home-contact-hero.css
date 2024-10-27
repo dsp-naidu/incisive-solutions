@@ -93,7 +93,7 @@
   color: #dfe6e6;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .home-contact-btn.btn-in-view {
     background-color: #0c585a;
     color: #dfe6e6;

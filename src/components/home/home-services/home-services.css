@@ -107,7 +107,7 @@
 }
 
 
-@media (max-width: 425px) {
+@media (max-width: 768px) {
   .home-service-card.service-card-in-view {
     transform: translateY(-10px);
     /* opacity: 1;
@@ -230,7 +230,7 @@
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 768px) {
   .home-service-card.service-card-in-view p {
     color: rgba(255, 255, 255, 0.9);
   }
@@ -252,7 +252,14 @@
   color: rgba(28, 200, 202, 1);
 }
 
-@media (max-width: 425px) {
+.home-service-card:hover a {
+  border-bottom: 2px solid #FF5733;
+  border-bottom: 2px solid #1cc8ca;
+  color: rgba(255, 87, 51, 1);
+  color: rgba(28, 200, 202, 1);
+}
+
+@media (max-width: 768px) {
   .home-service-card.service-card-in-view a {
     border-bottom: 2px solid #FF5733;
     border-bottom: 2px solid #1cc8ca;

@@ -158,7 +158,7 @@
   color: rgba(255, 255, 255, 1)
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 901px) {
   .contact-form.in-view .phone-input-container select {
     color: rgba(255, 255, 255, 1);
   }
@@ -229,7 +229,7 @@
   color: #dfe6e6;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 901px) {
   .contact-form button.buttonInView {
     background-color: #0c585a;
     color: #dfe6e6;
