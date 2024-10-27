@@ -1,11 +1,10 @@
-
 .home-contact-container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   padding: 3.25em 3.125em;
   gap: 3em;
-  background-color: #000202;
+  background: #000202;
 }
 
 @media (max-width: 901px) {

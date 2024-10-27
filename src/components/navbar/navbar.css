@@ -248,11 +248,15 @@
   /* position: relative; */
 }
 
+.active {
+  color: #f5f5f5;
+  font-weight: 500;
+}
+
 /* add .active of NavLink to style active menu item */
 .navbar-menu-item:hover,
 .navbar-menu-item:focus,
-.navbar-menu-item.dropdown-active,
-.active {
+.navbar-menu-item.dropdown-active {
   color: #169ea0;
   /* rgba(22, 158, 160, 1) */
   font-weight: 700;

@@ -1,8 +1,8 @@
-
 .home-contact-hero-container {
   position: relative;
   width: 100%;
   height: 82vh;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -93,6 +93,12 @@
   color: #dfe6e6;
 }
 
+@media screen and (max-width: 425px) {
+  .home-contact-btn.btn-in-view {
+    background-color: #0c585a;
+    color: #dfe6e6;
+  }
+}
 
 .home-contact-btn:active {
   transform: scale(0.95);

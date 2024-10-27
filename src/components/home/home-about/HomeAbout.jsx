@@ -1,8 +1,38 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './home-about.css';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 function HomeAbout() {
+  useEffect(() => {
+    const headings = document.querySelectorAll('.home-about-heading h1');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('heading-in-view');
+            // entry.target.classList.remove('heading-out-of-view');
+          } else {
+            entry.target.classList.remove('heading-in-view');
+            {
+              /* Reset class when out of view */
+            }
+            // entry.target.classList.add('heading-out-of-view');
+          }
+        });
+      },
+      {
+        threshold: 1, // Trigger when 70% of the card is in view
+      }
+    );
+
+    headings.forEach((heading) => observer.observe(heading));
+
+    return () => {
+      headings.forEach((heading) => observer.unobserve(heading));
+    };
+  }, []);
+
   return (
     <div className="home-about-wrapper">
       <div className="home-about-container">

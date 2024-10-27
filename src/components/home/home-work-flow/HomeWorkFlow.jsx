@@ -1,7 +1,41 @@
-import React from 'react';
+import { useEffect } from 'react';
 import './home-work-flow.css';
 
 function HomeWorkFlow() {
+  useEffect(() => {
+    const cards = document.querySelectorAll('.workflow-card');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            // entry.target.classList.remove('out-of-view');
+          } else {
+            entry.target.classList.remove('in-view');
+            {
+              /* Reset class when out of view */
+            }
+            // entry.target.classList.add('out-of-view');
+          }
+        });
+      },
+      {
+        threshold: 1, // Trigger when 70% of the card is in view
+      }
+    );
+
+    cards.forEach((card) => {
+      observer.observe(card);
+    });
+
+    // Cleanup observer on component unmount
+    return () => {
+      cards.forEach((card) => {
+        observer.unobserve(card);
+      });
+    };
+  }, []);
 
   return (
     <div className="home-work-flow-container">

@@ -4,7 +4,7 @@
   height: 100vh;
   overflow: hidden;
   background-color: #030e22;
-  background-color: #000;
+  background-color: #000202;
   /* Fallback background color */
   background-image: url('/assets/home-hero-2.jpeg');
   background-size: cover;
@@ -36,6 +36,7 @@
     background-position: 0 100%;
   }
 }
+
 
 .hero-container::before {
   content: '';

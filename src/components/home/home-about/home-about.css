@@ -56,6 +56,13 @@
   transition: color 0.3s ease;
 }
 
+@media screen and (max-width: 425px) {
+  .home-about-heading h1.heading-in-view {
+    color: #1ed5d7;
+    transition: color 0.3s ease;
+  }
+}
+
 
 @media (max-width: 768px) {
   .home-about-heading h1 {

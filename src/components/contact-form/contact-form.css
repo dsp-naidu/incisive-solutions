@@ -4,6 +4,7 @@
   /* background-color: #f9f9f9; */
   background-color: #fff;
   background-color: #f1f1f1;
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 0.5em;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   max-width: 100%;
@@ -24,6 +25,7 @@
 .contact-form h1 {
   font-size: 2em;
   text-align: left;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 @media (max-width: 425px) {
@@ -42,6 +44,7 @@
   margin: 1em 0 2.5em 0;
   font-size: 1em;
   color: #666;
+  color: rgba(255, 255, 255, 0.7);
   text-align: left;
 }
 
@@ -72,10 +75,14 @@
 
 .contact-form .form-input {
   background-color: #f9f9f9;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .contact-form .form-input option {
   background-color: #f5f5f5;
+  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 /* Inputs and Textarea */
@@ -84,8 +91,15 @@
   padding: 1em;
   font-size: 1em;
   border: 1px solid #ccc;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 0.25em;
+  color: rgba(255, 255, 255, 1);
   width: 100%;
+}
+
+::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  opacity: 1;
 }
 
 @media (max-width: 320px) {
@@ -125,6 +139,7 @@
   padding: 1em;
   font-size: 1em;
   border: 1px solid #ccc;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 0.25em;
 }
 
@@ -133,6 +148,21 @@
   max-width: 45%;
   padding-right: 2.5em;
   color: #666;
+  color: rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-form:hover .phone-input-container select,
+.contact-form.inputInFocus .phone-input-container select,
+.phone-input-container.formInputActive select {
+  color: rgba(255, 255, 255, 1)
+}
+
+@media screen and (max-width: 425px) {
+  .contact-form.in-view .phone-input-container select {
+    color: rgba(255, 255, 255, 1);
+  }
+
 }
 
 .phone-input-container input {
@@ -199,6 +229,12 @@
   color: #dfe6e6;
 }
 
+@media screen and (max-width: 425px) {
+  .contact-form button.buttonInView {
+    background-color: #0c585a;
+    color: #dfe6e6;
+  }
+}
 .contact-form button:active {
   background-color: #0a6a6b;
   transform: scale(0.95);

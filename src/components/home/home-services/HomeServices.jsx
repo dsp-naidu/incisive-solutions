@@ -10,14 +10,19 @@ function HomeServices() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('in-view');
+            entry.target.classList.add('service-card-in-view');
+            // entry.target.classList.remove('out-of-view');
           } else {
-            entry.target.classList.remove('in-view');
+            entry.target.classList.remove('service-card-in-view');
+            {
+              /* Reset class when out of view */
+            }
+            // entry.target.classList.add('out-of-view');
           }
         });
       },
       {
-        threshold: 0.5, // Trigger when 50% of the card is in view
+        threshold: 1, // Trigger when 70% of the card is in view
       }
     );
 
