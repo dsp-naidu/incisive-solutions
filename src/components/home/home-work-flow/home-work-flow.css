@@ -124,10 +124,14 @@
 }
 
 @media (max-width: 425px) {
+  .workflow-card {
+    background-color: rgba(2, 17, 18, 0.5);
+  }
+
   .workflow-card.in-view {
     transform: translateY(-10px);
     /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); */
-    background-color: rgba(2, 17, 18, 0.5);
+    background-color: rgba(2, 17, 18, 1);
   }
 }
 
