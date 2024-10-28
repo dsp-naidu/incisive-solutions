@@ -1,29 +1,44 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import './web-dev-section-1.css';
 
 function WebDevSection1() {
-  const cardRef = useRef();
-
   useEffect(() => {
+    const cards = document.querySelectorAll('.web-dev-card');
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('in-view');
+            entry.target.classList.add('wd-card-in-view');
+            // entry.target.classList.remove('out-of-view');
+          } else {
+            entry.target.classList.remove('wd-card-in-view');
+            {
+              /* Reset class when out of view */
+            }
+            // entry.target.classList.add('out-of-view');
           }
         });
       },
-      { threshold: 0.1 }
+      {
+        threshold: 0.7, // Trigger when 70% of the card is in view
+      }
     );
 
-    const cards = cardRef.current.querySelectorAll('.web-dev-card');
-    cards.forEach((card) => observer.observe(card));
+    cards.forEach((card) => {
+      observer.observe(card);
+    });
 
-    return () => observer.disconnect();
+    // Cleanup observer on component unmount
+    return () => {
+      cards.forEach((card) => {
+        observer.unobserve(card);
+      });
+    };
   }, []);
 
   return (
-    <section className="web-dev-section-1-container" ref={cardRef}>
+    <section className="web-dev-section-1-container">
       <div className="wds1-spacer__60"></div>
       <h1>Building Dynamic and User-Centric Digital Experiences</h1>
 

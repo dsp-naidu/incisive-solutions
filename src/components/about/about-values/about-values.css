@@ -57,9 +57,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1em;
-
 }
-
 
 .value {
   display: flex;
@@ -121,4 +119,17 @@
   color: #c1c3c3;
   font-weight: 500;
   transition: color 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  .value.value-in-view img {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .value.value-in-view p {
+    color: #c1c3c3;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+  }
 }

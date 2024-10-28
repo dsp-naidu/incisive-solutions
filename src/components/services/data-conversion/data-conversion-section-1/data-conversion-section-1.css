@@ -166,14 +166,7 @@ strong {
   margin-top: 1em;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-.data-conversion-card.in-view {
-  opacity: 1;
-  transform: translateY(0);
+  transition: box-shadow 0.3s ease;
 }
 
 .data-conversion-card:hover {
@@ -217,5 +210,21 @@ strong {
 @media (max-width: 768px) {
   .data-conversion-section-1-content {
     grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .data-conversion-card {
+    opacity: 0.6;
+  }
+
+  .data-conversion-card.dc-card-in-view {
+    opacity: 1;
+    box-shadow: 0px 6px 15px rgba(51, 98, 204, 0.4);
+  }
+
+  .data-conversion-card.dc-card-in-view .data-conversion-section-1-left p,
+  .data-conversion-card.dc-card-in-view ul li {
+    color: #ddd;
   }
 }

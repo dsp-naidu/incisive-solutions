@@ -12,6 +12,11 @@ function TeamSection1() {
       quote:
         'I believe in empowering teams to push the boundaries of innovation.',
       designation: 'Technical Director',
+      // socialLinks: {
+      //   linkedin: 'https://linkedin.com/in/ramesh',
+      //   facebook: 'https://facebook.com/ramesh',
+      //   twitter: 'https://twitter.com/ramesh',
+      // },
     },
     {
       image: '/assets/siva.png',

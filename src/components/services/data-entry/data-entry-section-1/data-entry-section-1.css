@@ -166,14 +166,7 @@ strong {
   margin-top: 1em;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-.data-entry-card.in-view {
-  opacity: 1;
-  transform: translateY(0);
+  transition: box-shadow 0.3s ease;
 }
 
 .data-entry-card:hover {
@@ -183,10 +176,11 @@ strong {
 .data-entry-section-1-container h1 {
   font-size: 2em;
   font-weight: 500;
-  color: #E8505B; /* Highlighted color */
+  color: #E8505B;
+  /* Highlighted color */
 }
 
-.data-entry-section-1-left p, 
+.data-entry-section-1-left p,
 .data-entry-section-1-left ul li {
   color: #aaa;
   font-size: 1.05em;
@@ -194,13 +188,15 @@ strong {
   transition: color 0.3s ease;
 }
 
-.data-entry-section-1-left p:hover, 
+.data-entry-section-1-left p:hover,
 .data-entry-section-1-left ul li:hover {
-  color: #ddd; /* Color on hover */
+  color: #ddd;
+  /* Color on hover */
 }
 
 .data-entry-section-1-left strong {
-  color: #E8505B; /* Use highlight color for emphasis */
+  color: #E8505B;
+  /* Use highlight color for emphasis */
   font-weight: 700;
 }
 
@@ -214,5 +210,21 @@ strong {
 @media (max-width: 768px) {
   .data-entry-section-1-content {
     grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .data-entry-card {
+    opacity: 0.6;
+  }
+
+  .data-entry-card.de-card-in-view {
+    opacity: 1;
+    box-shadow: 0px 6px 15px rgba(232, 80, 91, 0.4);
+  }
+
+  .data-entry-card.de-card-in-view .data-entry-section-1-left p,
+  .data-entry-card.de-card-in-view ul li {
+    color: #ddd;
   }
 }

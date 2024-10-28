@@ -1,29 +1,44 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import './data-processing-section-1.css';
 
 function DataProcessingSection1() {
-  const cardRef = useRef();
-
   useEffect(() => {
+    const cards = document.querySelectorAll('.data-processing-card');
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('in-view');
+            entry.target.classList.add('dp-card-in-view');
+            // entry.target.classList.remove('out-of-view');
+          } else {
+            entry.target.classList.remove('dp-card-in-view');
+            {
+              /* Reset class when out of view */
+            }
+            // entry.target.classList.add('out-of-view');
           }
         });
       },
-      { threshold: 0.1 }
+      {
+        threshold: 0.7, // Trigger when 70% of the card is in view
+      }
     );
 
-    const cards = cardRef.current.querySelectorAll('.data-processing-card');
-    cards.forEach((card) => observer.observe(card));
+    cards.forEach((card) => {
+      observer.observe(card);
+    });
 
-    return () => observer.disconnect();
+    // Cleanup observer on component unmount
+    return () => {
+      cards.forEach((card) => {
+        observer.unobserve(card);
+      });
+    };
   }, []);
 
   return (
-    <section className="data-processing-section-1-container" ref={cardRef}>
+    <section className="data-processing-section-1-container">
       <div className="dps1-spacer__60"></div>
       <h1>Transforming Raw Data into Valuable Insights</h1>
 

@@ -166,14 +166,7 @@ strong {
   margin-top: 1em;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-.data-analysis-card.in-view {
-  opacity: 1;
-  transform: translateY(0);
+  transition: box-shadow 0.3s ease;
 }
 
 .data-analysis-card:hover {
@@ -217,5 +210,21 @@ strong {
 @media (max-width: 768px) {
   .data-analysis-section-1-content {
     grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .data-analysis-card {
+    opacity: 0.6;
+  }
+
+  .data-analysis-card.da-card-in-view {
+    opacity: 1;
+    box-shadow: 0px 6px 15px rgba(146, 227, 169, 0.4);
+  }
+
+  .data-analysis-card.da-card-in-view .data-analysis-section-1-left p,
+  .data-analysis-card.da-card-in-view ul li {
+    color: #ddd;
   }
 }

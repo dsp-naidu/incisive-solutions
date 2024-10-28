@@ -166,14 +166,7 @@ strong {
   margin-top: 1em;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-.web-dev-card.in-view {
-  opacity: 1;
-  transform: translateY(0);
+  transition: box-shadow 0.3s ease;
 }
 
 .web-dev-card:hover {
@@ -217,5 +210,21 @@ strong {
 @media (max-width: 768px) {
   .web-dev-section-1-content {
     grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .web-dev-card {
+    opacity: 0.6;
+  }
+
+  .web-dev-card.wd-card-in-view {
+    opacity: 1;
+    box-shadow: 0px 6px 15px rgba(225, 67, 106, 0.4);
+  }
+
+  .web-dev-card.wd-card-in-view .web-dev-section-1-left p,
+  .web-dev-card.wd-card-in-view ul li {
+    color: #ddd;
   }
 }

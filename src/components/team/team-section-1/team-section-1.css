@@ -65,6 +65,13 @@
   backdrop-filter: blur(10px);
 }
 
+@media screen and (max-width: 768px) {
+  .team-card.team-card-in-view {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+  }
+}
+
 .team-card-container {
   padding: 25px;
   height: 100%;
@@ -150,6 +157,12 @@
 
 .team-s1-social-icons:hover {
   color: #87CEFA;
+}
+
+@media screen and (max-width: 768px) {
+  .team-card.team-card-in-view .team-s1-social-icons {
+    color: #87CEFA;
+  }
 }
 
 .ts1-spacer__40 {

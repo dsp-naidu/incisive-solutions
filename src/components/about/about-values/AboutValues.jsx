@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './about-values.css';
 
 function AboutValues() {
@@ -25,10 +25,45 @@ function AboutValues() {
     },
   ];
 
+  useEffect(() => {
+    const aboutValues = document.querySelectorAll('.value');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('value-in-view');
+            // entry.target.classList.remove('out-of-view');
+          } else {
+            entry.target.classList.remove('value-in-view');
+            {
+              /* Reset class when out of view */
+            }
+            // entry.target.classList.add('out-of-view');
+          }
+        });
+      },
+      {
+        threshold: 1, // Trigger when 70% of the card is in view
+      }
+    );
+
+    aboutValues.forEach((card) => {
+      observer.observe(card);
+    });
+
+    // Cleanup observer on component unmount
+    return () => {
+      aboutValues.forEach((card) => {
+        observer.unobserve(card);
+      });
+    };
+  }, []);
+
   return (
     <section className="about-values-container">
       <h1>We Live by These Values</h1>
-      <div className='about-values__spacer-40'></div>
+      <div className="about-values__spacer-40"></div>
       <div className="values-container">
         {values.map((value, index) => (
           <div className="value" key={index}>
@@ -37,7 +72,7 @@ function AboutValues() {
           </div>
         ))}
       </div>
-      <div className='about-values__spacer-40'></div>
+      <div className="about-values__spacer-40"></div>
     </section>
   );
 }

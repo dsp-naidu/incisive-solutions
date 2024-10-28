@@ -1,29 +1,44 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import './hr-functions-section-1.css';
 
 function HRFunctionsSection1() {
-  const cardRef = useRef();
-
   useEffect(() => {
+    const cards = document.querySelectorAll('.hr-functions-card');
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('in-view');
+            entry.target.classList.add('hf-card-in-view');
+            // entry.target.classList.remove('out-of-view');
+          } else {
+            entry.target.classList.remove('hf-card-in-view');
+            {
+              /* Reset class when out of view */
+            }
+            // entry.target.classList.add('out-of-view');
           }
         });
       },
-      { threshold: 0.1 }
+      {
+        threshold: 0.7, // Trigger when 70% of the card is in view
+      }
     );
 
-    const cards = cardRef.current.querySelectorAll('.hr-functions-card');
-    cards.forEach((card) => observer.observe(card));
+    cards.forEach((card) => {
+      observer.observe(card);
+    });
 
-    return () => observer.disconnect();
+    // Cleanup observer on component unmount
+    return () => {
+      cards.forEach((card) => {
+        observer.unobserve(card);
+      });
+    };
   }, []);
 
   return (
-    <section className="hr-functions-section-1-container" ref={cardRef}>
+    <section className="hr-functions-section-1-container">
       <div className="hfs1-spacer__60"></div>
       <h1>Streamlining Your HR Processes for Enhanced Efficiency</h1>
 

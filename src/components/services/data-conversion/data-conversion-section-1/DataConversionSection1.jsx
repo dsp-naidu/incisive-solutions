@@ -1,29 +1,44 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import './data-conversion-section-1.css';
 
 function DataConversionSection1() {
-  const cardRef = useRef();
-
   useEffect(() => {
+    const cards = document.querySelectorAll('.data-conversion-card');
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('in-view');
+            entry.target.classList.add('dc-card-in-view');
+            // entry.target.classList.remove('out-of-view');
+          } else {
+            entry.target.classList.remove('dc-card-in-view');
+            {
+              /* Reset class when out of view */
+            }
+            // entry.target.classList.add('out-of-view');
           }
         });
       },
-      { threshold: 0.1 }
+      {
+        threshold: 0.7, // Trigger when 70% of the card is in view
+      }
     );
 
-    const cards = cardRef.current.querySelectorAll('.data-conversion-card');
-    cards.forEach((card) => observer.observe(card));
+    cards.forEach((card) => {
+      observer.observe(card);
+    });
 
-    return () => observer.disconnect();
+    // Cleanup observer on component unmount
+    return () => {
+      cards.forEach((card) => {
+        observer.unobserve(card);
+      });
+    };
   }, []);
 
   return (
-    <section className="data-conversion-section-1-container" ref={cardRef}>
+    <section className="data-conversion-section-1-container">
       <div className="dcs1-spacer__60"></div>
       <h1>Seamless Data Transformation for Modern Businesses</h1>
 
