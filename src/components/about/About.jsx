@@ -21,7 +21,7 @@ function About() {
 
         <div className="about-content-wrapper">
           <AboutSection1 />
-          <AboutValues />
+          {/* <AboutValues /> */}
         </div>
       </div>
     </main>

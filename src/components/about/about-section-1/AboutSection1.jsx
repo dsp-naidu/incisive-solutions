@@ -1,7 +1,65 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './about-section-1.css';
 
 function AboutSection1() {
+  const values = [
+    {
+      imgSrc: 'about-values-1.svg',
+      description: 'We uphold highest standards of Honesty and Integrity',
+    },
+    {
+      imgSrc: 'about-values-2.svg',
+      description: 'We provide outstanding quality of Products & Services',
+    },
+    {
+      imgSrc: 'about-values-3.svg',
+      description: 'We work together to strive for Customer Satisfaction',
+    },
+    {
+      imgSrc: 'about-values-4.svg',
+      description: 'We are passionate to improve & innovate continuously',
+    },
+    {
+      imgSrc: 'about-values-5.svg',
+      description: 'We Value, Engage, Encourage and Reward our people',
+    },
+  ];
+
+  useEffect(() => {
+    const aboutValues = document.querySelectorAll('.value');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('value-in-view');
+            // entry.target.classList.remove('out-of-view');
+          } else {
+            entry.target.classList.remove('value-in-view');
+            {
+              /* Reset class when out of view */
+            }
+            // entry.target.classList.add('out-of-view');
+          }
+        });
+      },
+      {
+        threshold: 1, // Trigger when 70% of the card is in view
+      }
+    );
+
+    aboutValues.forEach((card) => {
+      observer.observe(card);
+    });
+
+    // Cleanup observer on component unmount
+    return () => {
+      aboutValues.forEach((card) => {
+        observer.unobserve(card);
+      });
+    };
+  }, []);
+
   return (
     <section className="about-section-1-container">
       <div className="as1-spacer__40"></div>
@@ -10,7 +68,28 @@ function AboutSection1() {
       <div className="about-section-1-content">
         <div className="about-section-1">
           {/* <h1>YOUR TOP-NOTCH BPO SERVICE PROVIDER</h1> */}
-          
+
+          <div className="about-journey bg-black-hole about-content-div">
+            <h2>Our Journey</h2>
+            <div className="about-journey-flex">
+              <p>
+                Founded with a passion for excellence, Incisive Solutions has
+                evolved into a trusted partner for businesses looking to
+                optimize their operations and improve service delivery. Our
+                commitment to quality and client satisfaction has led to a 100%
+                client retention ratio, a testament to our dedication and
+                effectiveness.
+              </p>
+              <img src="/assets/journey.png" />
+              <p>
+                Join us on our journey to redefine outsourcing services, and let{' '}
+                <span>Incisive Solutions</span> help your business thrive in a
+                competitive landscape. Together, we can unlock new opportunities
+                and achieve greater success.
+              </p>
+            </div>
+          </div>
+
           <div className="about-intro bg-black-hole about-content-div">
             <p>
               At <span>Incisive Solutions</span>, we are dedicated to providing
@@ -50,6 +129,20 @@ function AboutSection1() {
                 long-term partnerships built on trust and reliability.
               </p>
             </div>
+          </div>
+
+          <div className="about-values-container">
+            <h1>We Live by These Values</h1>
+            <div className="about-values__spacer-40"></div>
+            <div className="values-container">
+              {values.map((value, index) => (
+                <div className="value" key={index}>
+                  <img src={value.imgSrc} alt={`value-${index}`} />
+                  <p>{value.description}</p>
+                </div>
+              ))}
+            </div>
+            <div className="about-values__spacer-40"></div>
           </div>
 
           <div className="about-why bg-black-hole about-content-div">
@@ -97,7 +190,7 @@ function AboutSection1() {
             </div>
           </div>
 
-          <div className="about-journey bg-black-hole about-content-div">
+          {/* <div className="about-journey bg-black-hole about-content-div">
             <h2>Our Journey</h2>
             <div className="about-journey-flex">
               <p>
@@ -116,9 +209,8 @@ function AboutSection1() {
                 and achieve greater success.
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
-
       </div>
     </section>
   );

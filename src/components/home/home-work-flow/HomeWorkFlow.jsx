@@ -3,16 +3,16 @@ import './home-work-flow.css';
 
 function HomeWorkFlow() {
   useEffect(() => {
-    const cards = document.querySelectorAll('.workflow-card');
+    const cards = document.querySelectorAll('.content');
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('in-view');
+            entry.target.classList.add('work-flow-content-in-view');
             // entry.target.classList.remove('out-of-view');
           } else {
-            entry.target.classList.remove('in-view');
+            entry.target.classList.remove('work-flow-content-in-view');
             {
               /* Reset class when out of view */
             }
@@ -47,8 +47,8 @@ function HomeWorkFlow() {
         manage the process in an efficient way.
       </p>
 
-      <div className="workflow-section scroll-container">
-        <div className="workflow-card scroll-section" id="section-1">
+      {/* <div className="workflow-section scroll-container">
+        <div className="workflow-card left scroll-section" id="section-1">
           <span>1.</span>
           <div className="workflow-card-content">
             <h2>New Lead</h2>
@@ -58,7 +58,7 @@ function HomeWorkFlow() {
           </div>
         </div>
 
-        <div className="workflow-card scroll-section" id="section-2">
+        <div className="workflow-card right scroll-section" id="section-2">
           <span>2.</span>
           <div className="workflow-card-content">
             <h2>Sample Processing</h2>
@@ -66,7 +66,7 @@ function HomeWorkFlow() {
           </div>
         </div>
 
-        <div className="workflow-card scroll-section" id="section-3">
+        <div className="workflow-card left scroll-section" id="section-3">
           <span>3.</span>
           <div className="workflow-card-content">
             <h2>Rate Fixing</h2>
@@ -74,7 +74,7 @@ function HomeWorkFlow() {
           </div>
         </div>
 
-        <div className="workflow-card scroll-section" id="section-4">
+        <div className="workflow-card right scroll-section" id="section-4">
           <span>4.</span>
           <div className="workflow-card-content">
             <h2>Quality Check</h2>
@@ -82,7 +82,7 @@ function HomeWorkFlow() {
           </div>
         </div>
 
-        <div className="workflow-card scroll-section" id="section-5">
+        <div className="workflow-card left scroll-section" id="section-5">
           <span>5.</span>
           <div className="workflow-card-content">
             <h2>Auditing</h2>
@@ -90,9 +90,50 @@ function HomeWorkFlow() {
           </div>
         </div>
 
-        <div className="workflow-card scroll-section" id="section-6">
+        <div className="workflow-card right scroll-section" id="section-6">
           <span>6.</span>
           <div className="workflow-card-content">
+            <h2>Dispatch</h2>
+            <p>Time-bound project delivery, always.</p>
+          </div>
+        </div>
+      </div> */}
+
+      <div className="timeline">
+        <div className="container left">
+          <div className="content">
+            <h2>New Lead</h2>
+            <p>
+              A potential client&apos;s enquiry - the project&apos;s inception.
+            </p>
+          </div>
+        </div>
+        <div className="container right">
+          <div className="content">
+            <h2>Sample Processing</h2>
+            <p>Determines how the project&apos;s final output will be.</p>
+          </div>
+        </div>
+        <div className="container left">
+          <div className="content">
+            <h2>Rate Fixing</h2>
+            <p>Budget-friendly pricing for the project.</p>
+          </div>
+        </div>
+        <div className="container right">
+          <div className="content">
+            <h2>Quality Check</h2>
+            <p>Rigorous quality checks while on the project.</p>
+          </div>
+        </div>
+        <div className="container left">
+          <div className="content">
+            <h2>Auditing</h2>
+            <p>Final quality inspection that ensures project delivery.</p>
+          </div>
+        </div>
+        <div className="container right">
+          <div className="content">
             <h2>Dispatch</h2>
             <p>Time-bound project delivery, always.</p>
           </div>

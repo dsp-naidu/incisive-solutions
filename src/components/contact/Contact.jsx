@@ -65,7 +65,7 @@ function Contact() {
                 </p>
               </div>
 
-              <div className="contact-content-communication-section">
+              {/* <div className="contact-content-communication-section">
                 <span>
                   <FaLocationDot />
                 </span>
@@ -85,7 +85,7 @@ function Contact() {
                     title="Incisive Solutions"
                   ></iframe>
                 </div>
-              </div>
+              </div> */}
 
               <div className="contact-content-communication-section">
                 <span>
@@ -104,6 +104,28 @@ function Contact() {
                 <div>
                   <h2>Help Desk</h2>
                   <p>info@incisivesolutions.in</p>
+                </div>
+              </div>
+
+              <div className="contact-content-communication-section">
+                <span>
+                  <FaLocationDot />
+                </span>
+                <div>
+                  <h2>Reach Us</h2>
+                  <p>6-16, NAD Colony, Krishnarayapuram, Vepagunta,</p>
+                  <p>Visakhapatnam - 530051, Andhra Pradesh, India</p>
+                  <br />
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d949.7799215668816!2d83.21564226951601!3d17.786071275953496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDQ3JzA5LjkiTiA4M8KwMTInNTguNiJF!5e0!3m2!1sen!2sin!4v1729856483246!5m2!1sen!2sin"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0, borderRadius: '10px', opacity: 0.8 }}
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Incisive Solutions"
+                  ></iframe>
                 </div>
               </div>
             </div>
