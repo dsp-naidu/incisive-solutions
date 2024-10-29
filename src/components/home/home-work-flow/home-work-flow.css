@@ -300,6 +300,7 @@
   position: absolute;
   width: 6px;
   background-color: rgba(2, 17, 18, 1);
+  background-color: rgba(7, 57, 60, 1);
   top: 0;
   bottom: 0;
   left: 50%;
@@ -322,6 +323,7 @@
   height: 25px;
   right: -17px;
   background-color: rgba(2, 17, 18, 1);
+  background-color: rgba(7, 57, 60, 1);
   border: 4px solid #000;
   top: 15px;
   border-radius: 50%;
@@ -358,8 +360,9 @@
   z-index: 1;
   right: 30px;
   border: medium solid rgba(2, 17, 18, 0.5);
+  border: medium solid rgba(7, 57, 60, 0.5);
   border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent rgba(2, 17, 18, 0.5);
+  border-color: transparent transparent transparent rgba(7, 57, 60, 0.5);
 }
 
 /* Add arrows to the right container (pointing left) */
@@ -372,8 +375,9 @@
   z-index: 1;
   left: 30px;
   border: medium solid rgba(2, 17, 18, 0.5);
+  border: medium solid rgba(7, 57, 60, 0.5);
   border-width: 10px 10px 10px 0;
-  border-color: transparent rgba(2, 17, 18, 0.5) transparent transparent;
+  border-color: transparent rgba(7, 57, 60, 0.5) transparent transparent;
 }
 
 /* Fix the circle for containers on the right side */
@@ -385,6 +389,7 @@
 .content {
   padding: 20px 30px;
   background-color: rgba(2, 17, 18, 0.5);
+  background-color: rgba(7, 57, 60, 0.5);
   position: relative;
   border-radius: 6px;
   /* transform: background-color 0.3s ease; */
@@ -393,20 +398,26 @@
 
 .content:hover {
   background-color: rgba(2, 17, 18, 1);
+  background-color: rgba(7, 57, 60, 1);
 }
 
 
 @media screen and (max-width: 768px) {
   .content.work-flow-content-in-view {
     background-color: rgba(2, 17, 18, 1);
+    background-color: rgba(7, 57, 60, 1);
   }
 
   .container.work-flow-content-in-view.left::before {
     border-color: transparent transparent transparent rgba(2, 17, 18, 1);
+    border-color: transparent transparent transparent rgba(7, 57, 60, 1);
+
   }
 
   .content.work-flow-content-in-view.right::before {
     border-color: transparent rgba(2, 17, 18, 1) transparent transparent;
+    border-color: transparent rgba(7, 57, 60, 1) transparent transparent;
+
   }
 }
 
@@ -415,6 +426,11 @@
   font-size: 1.5em;
   color: #dfe1e1;
   color: #3aa2a4;
+}
+
+.content:hover h2 {
+  color: #15b2bc;
+  color: #1adae6;
 }
 
 @media (max-width: 1156px) {
@@ -444,6 +460,11 @@
   .content.work-flow-content-in-view p {
     color: rgba(255, 255, 255, 0.75);
   }
+
+  .content.work-flow-content-in-view h2 {
+    color: #15b2bc;
+    color: #1adae6;
+  }
 }
 
 @media screen and (max-width: 425px) {
@@ -471,8 +492,9 @@
   .container::before {
     left: 60px;
     border: medium solid rgba(2, 17, 18, 0.5);
+    border: medium solid rgba(7, 57, 60, 1);
     border-width: 10px 10px 10px 0;
-    border-color: transparent rgba(2, 17, 18, 0.5) transparent transparent;
+    border-color: transparent rgba(7, 57, 60, 1) transparent transparent;
   }
 
   /* Make sure all circles are at the same spot */
