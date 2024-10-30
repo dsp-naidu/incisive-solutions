@@ -53,13 +53,16 @@
   position: relative;
   z-index: 3;
   color: #fff;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  /* text-align: center; */
+  text-align: left;
+  top: 25%;
+  /* left: 1%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
   padding: 0 1.25em;
   margin: 1.25em 0;
   font-size: 2.75em;
+  font-size: 3em;
   font-weight: 600;
   /* margin-bottom: 0.5em; */
 }
@@ -73,6 +76,11 @@
   font-size: inherit;
   font-weight: inherit;
   transition: all 0.2s ease;
+
+  background-color: #333;
+  /* padding: 0 15px 3px; */
+  border-radius: 6px;
+  font-weight: 600;
 }
 
 
@@ -91,5 +99,17 @@
 @media (max-width: 480px) {
   .hero-text {
     font-size: 2em;
+  }
+}
+
+@media (max-width: 405px) {
+  .hero-text {
+    font-size: 1.85em;
+  }
+}
+
+@media (max-width: 320px) {
+  .hero-text {
+    font-size: 1.5em;
   }
 }

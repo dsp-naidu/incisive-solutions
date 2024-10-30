@@ -334,10 +334,45 @@
 .left {
   left: 0;
   text-align: right;
+  position: relative;
 }
 
 .left p {
   text-align: right;
+}
+
+.content .left-icon {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+  /* background-image: url('/assets/new-lead.png'); */
+  background-size: contain;
+  background-repeat: no-repeat;
+  rotate: -45deg;
+  background-blend-mode: multiply;
+  transition: all 0.3s ease-in-out;
+}
+
+.content .right-icon {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: 10%;
+  right: 0;
+  opacity: 0.25;
+  /* background-image: url('/assets/new-lead.png'); */
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* rotate: 45deg; */
+  background-blend-mode: multiply;
+}
+
+.content:hover .left-icon,
+.content:hover .right-icon {
+  opacity: 0.5;
 }
 
 /* Place the container to the right */
@@ -511,5 +546,17 @@
   .left h2,
   .left p {
     text-align: left;
+  }
+
+  .content .left-icon {
+    top: 10%;
+    left: 58%;
+    right: 0;
+    rotate: none;
+  }
+
+  .content.work-flow-content-in-view .left-icon,
+  .content.work-flow-content-in-view .right-icon {
+    opacity: 0.1;
   }
 }

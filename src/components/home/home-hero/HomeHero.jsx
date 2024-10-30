@@ -3,15 +3,25 @@ import './home-hero.css';
 
 function HomeHero() {
   const texts = [
-    { text: 'Data Entry', color: '#C7FF33' },
-    { text: 'Data Processing', color: '#00FFFF' },
-    { text: 'Data Conversion', color: '#FF00FF' },
-    { text: 'Data Analysis', color: '#A1F1F2' },
-    { text: 'Web Development', color: '#3BC4C5' },
-    { text: 'HR Outsourcing', color: '#FF69B4' },
-    { text: 'Incisive', color: '#26aaad' },
-    { text: 'Custom IT', color: '#FFF' },
+    { text: 'Data Entry', color: '#C7FF33', bgColor: '#0e1601', padding: "0 15px 3px" },
+    { text: 'Data Processing', color: '#339968', bgColor: '#041c10', padding: "0 15px 3px" },
+    { text: 'Data Conversion', color: '#FF00FF', bgColor: '#160016', padding: "0 15px 3px" },
+    { text: 'Data Analysis', color: '#FF802B', bgColor: '#391A03', padding: "0 15px 3px" },
+    { text: 'Web Development', color: '#3BC4C5', bgColor: '#042121', padding: "0 15px 3px" },
+    { text: 'HR Outsourcing', color: '#FF69B4', bgColor: '#16040c', padding: "0 15px 3px" },
+    // { text: 'Incisive', color: '#26aaad' },
+    { text: 'Custom IT', color: '#FFF', bgColor: 'transparent', padding: "0" },
   ];
+  // const texts = [
+  //   { text: 'Data Entry', color: '#C7FF33', bgColor: '#0e1601', padding: "0 15px 3px" },
+  //   { text: 'Data Processing', color: '#00FFFF', bgColor: '#001616', padding: "0 15px 3px" },
+  //   { text: 'Data Conversion', color: '#FF00FF', bgColor: '#160016', padding: "0 15px 3px" },
+  //   { text: 'Data Analysis', color: '#A1F1F2', bgColor: '#192b2b', padding: "0 15px 3px" },
+  //   { text: 'Web Development', color: '#3BC4C5', bgColor: '#010e0e', padding: "0 15px 3px" },
+  //   { text: 'HR Outsourcing', color: '#FF69B4', bgColor: '#16040c', padding: "0 15px 3px" },
+  //   // { text: 'Incisive', color: '#26aaad' },
+  //   { text: 'Custom IT', color: '#FFF', bgColor: 'transparent', padding: "0" },
+  // ];
   // const texts = [
   //   { text: 'Data Entry', color: '#0059ff' },
   //   { text: 'Data Processing', color: '#00ff27' },
@@ -49,16 +59,19 @@ function HomeHero() {
     <div className="hero-container">
       <div className="hero-text">
         <h1>
-          Transform Your Business with{' '}
-          {texts[currentIndex].text !== 'Incisive' && <span>Our </span>}
+          Transform Your Business<br />
+          with Our<br/>{' '}
+          {/* {texts[currentIndex].text !== 'Incisive' && <span>Our </span>} */}
           <span
             style={{
               color: texts[currentIndex].color,
+              backgroundColor: texts[currentIndex].bgColor,
+              padding: texts[currentIndex].padding,
             }}
           >
             {texts[currentIndex].text}
           </span>{' '}
-          Solutions
+          <br/>Solutions
         </h1>
       </div>
     </div>
