@@ -8,6 +8,7 @@ function DataProcessing() {
     <main>
       <Helmet>
         <title>Data Processing Services - Incisive Solutions</title>
+        <link rel="icon" type="image/svg+xml" href="favicon-incisive-solutions.ico" />
       </Helmet>
 
       <div className="data-processing-container">

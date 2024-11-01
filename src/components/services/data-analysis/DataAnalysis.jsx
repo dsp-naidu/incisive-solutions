@@ -8,6 +8,7 @@ function DataAnalysis() {
     <main>
       <Helmet>
         <title>Data Analysis Services - Incisive Solutions</title>
+        <link rel="icon" type="image/svg+xml" href="favicon-incisive-solutions.ico" />
       </Helmet>
 
       <div className="data-analysis-container">

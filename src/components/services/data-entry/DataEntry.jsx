@@ -8,6 +8,7 @@ function DataEntry() {
     <main>
       <Helmet>
         <title>Data Entry Services - Incisive Solutions</title>
+        <link rel="icon" type="image/svg+xml" href="favicon-incisive-solutions.ico" />
       </Helmet>
 
       <div className="data-entry-container">

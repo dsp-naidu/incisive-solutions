@@ -8,6 +8,7 @@ function HRFunctions() {
     <main>
       <Helmet>
         <title>HR Outsourcing Solutions - Incisive Solutions</title>
+        <link rel="icon" type="image/svg+xml" href="favicon-incisive-solutions.ico" />
       </Helmet>
       <div className="hr-functions-container">
         <div className="hr-functions-hero-container">
