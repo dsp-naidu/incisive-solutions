@@ -8,7 +8,7 @@ function WebDevelopment() {
     <main>
       <Helmet>
         <title>Web Development Solutions - Incisive Solutions</title>
-        <link rel="icon" type="image/svg+xml" href="favicon-incisive-solutions.ico" />
+        <link rel="icon" type="image/svg+xml" href="https://incisivesolutions.in/favicon-incisive-solutions.ico" />
       </Helmet>
 
       <div className="web-development-container">
