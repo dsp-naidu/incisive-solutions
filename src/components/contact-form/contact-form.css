@@ -235,13 +235,29 @@
     color: #dfe6e6;
   }
 }
+
 .contact-form button:active {
   background-color: #0a6a6b;
   transform: scale(0.95);
 }
 
+.form-submission-error {
+  color: #dc143c;
+}
+
+.form-input.error {
+  border-color: #dc143c;
+}
+
+.error-message {
+  color: #dc143c;
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
 /* Wrapper to center the success message */
-.success-wrapper {
+.success-wrapper,
+.error-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -280,6 +296,24 @@
   color: #28a745;
   font-size: 50px;
   margin-top: 15px;
+}
+
+.success-icon {
+  font-size: 3rem;
+  color: green;
+  margin-top: 1rem;
+}
+
+.submit-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.submit-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 /* Adding some fade-in effect */
@@ -377,4 +411,27 @@
     max-width: 100%;
   }
 
+}
+
+.try-again-button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #128587;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
